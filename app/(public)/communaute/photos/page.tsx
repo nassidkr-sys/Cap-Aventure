@@ -49,7 +49,39 @@ export default function PhotosCommunautePage() {
     { id: 17, url: "https://images.unsplash.com/photo-1543872084-c7bd3822856f?auto=format&fit=crop&w=800&q=80", location: "Haute-Savoie, France", author: "Mélanie", date: "Août 2025", likes: 198 },
     { id: 18, url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80", location: "Liège, Belgique", author: "Arthur", date: "Novembre 2025", likes: 73 },
     { id: 19, url: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80", location: "Corse, France", author: "Mathilde", date: "Juin 2025", likes: 259 },
-    { id: 20, url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80", location: "Spa, Belgique", author: "Hugo", date: "Mai 2025", likes: 91 }
+    { id: 20, url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80", location: "Spa, Belgique", author: "Hugo", date: "Mai 2025", likes: 91 },
+    { id: 21, url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80", location: "Biarritz, France", author: "Camille", date: "Juillet 2025", likes: 139 },
+    { id: 22, url: "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=800&q=80", location: "Ostende, Belgique", author: "Hendrik", date: "Août 2025", likes: 104 },
+    { id: 23, url: "https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?auto=format&fit=crop&w=800&q=80", location: "Dordogne, France", author: "Adrien", date: "Septembre 2025", likes: 115 },
+    { id: 24, url: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80", location: "Bouillon, Belgique", author: "Stéphane", date: "Octobre 2025", likes: 96 },
+
+    // Page 3 Photos
+    { id: 25, url: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80", location: "Vercors, France", author: "Benoît", date: "Novembre 2025", likes: 147 },
+    { id: 26, url: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80", location: "Knokke-Heist, Belgique", author: "Annelies", date: "Décembre 2025", likes: 110 },
+    { id: 27, url: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=80", location: "Alsace, France", author: "Céline", date: "Octobre 2025", likes: 125 },
+    { id: 28, url: "https://images.unsplash.com/photo-1472214222541-d510753a8707?auto=format&fit=crop&w=800&q=80", location: "Ypres, Belgique", author: "Dieter", date: "Septembre 2025", likes: 78 },
+    { id: 29, url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80", location: "Mercantour, France", author: "Juliane", date: "Août 2025", likes: 219 },
+    { id: 30, url: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80", location: "Mons, Belgique", author: "Geert", date: "Juillet 2025", likes: 64 },
+    { id: 31, url: "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=800&q=80", location: "Jura, France", author: "François", date: "Juin 2025", likes: 133 },
+    { id: 32, url: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=80", location: "Malmedy, Belgique", author: "Lara", date: "Mai 2025", likes: 102 },
+    { id: 33, url: "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?auto=format&fit=crop&w=800&q=80", location: "Landes, France", author: "Guillaume", date: "Avril 2025", likes: 175 },
+    { id: 34, url: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80", location: "Hautes Fagnes, Belgique", author: "Katrien", date: "Mars 2025", likes: 89 },
+    { id: 35, url: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=800&q=80", location: "Ardèche, France", author: "Cédric", date: "Février 2025", likes: 211 },
+    { id: 36, url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80", location: "Rochefort, Belgique", author: "Baudouin", date: "Janvier 2025", likes: 76 },
+
+    // Page 4 Photos
+    { id: 37, url: "https://images.unsplash.com/photo-1500627869374-13cd993b1115?auto=format&fit=crop&w=800&q=80", location: "Calanques de Cassis, France", author: "Thibault", date: "Décembre 2024", likes: 284 },
+    { id: 38, url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80", location: "Coxyde, Belgique", author: "Jonas", date: "Novembre 2024", likes: 122 },
+    { id: 39, url: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80", location: "Pyrénées, France", author: "Audrey", date: "Octobre 2024", likes: 319 },
+    { id: 40, url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80", location: "Dinant Citadelle, Belgique", author: "Philippe", date: "Septembre 2024", likes: 105 },
+    { id: 41, url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80", location: "Auvergne, France", author: "Valentin", date: "Août 2024", likes: 146 },
+    { id: 42, url: "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=800&q=80", location: "Tournai, Belgique", author: "Charlotte", date: "Juillet 2024", likes: 89 },
+    { id: 43, url: "https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?auto=format&fit=crop&w=800&q=80", location: "Gironde, France", author: "Mathieu", date: "Juin 2024", likes: 172 },
+    { id: 44, url: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80", location: "Herve, Belgique", author: "Nathalie", date: "Mai 2024", likes: 65 },
+    { id: 45, url: "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=800&q=80", location: "Finistère, France", author: "Alexandre", date: "Avril 2024", likes: 201 },
+    { id: 46, url: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80", location: "Bastogne, Belgique", author: "Michel", date: "Mars 2024", likes: 82 },
+    { id: 47, url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80", location: "Luberon, France", author: "Elise", date: "Février 2024", likes: 194 },
+    { id: 48, url: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80", location: "Saint-Hubert, Belgique", author: "Laurent", date: "Janvier 2024", likes: 153 }
   ]);
 
   const displayedPhotos = useMemo(() => {
