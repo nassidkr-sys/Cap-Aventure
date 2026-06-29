@@ -753,6 +753,17 @@ export default function HomePage() {
             })}
           </div>
 
+          {/* Centered CTA Button */}
+          <div className="flex justify-center pt-8">
+            <Link 
+              href="/vehicules"
+              className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-brand-accent hover:bg-brand-accent-hover text-white rounded-full text-sm font-extrabold shadow-lg hover-lift transition-all duration-200"
+            >
+              <span>Louer un camping-car</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
         </div>
       </section>
 
