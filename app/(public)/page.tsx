@@ -19,8 +19,6 @@ import {
 } from 'lucide-react';
 import { getVehicles, MOCK_VEHICLES } from '@/services/db';
 import { Vehicle } from '@/types';
-import CustomSelect from '@/components/ui/CustomSelect';
-import DateRangePicker from '@/components/admin/DateRangePicker';
 
 export default function HomePage() {
   const router = useRouter();
@@ -29,7 +27,8 @@ export default function HomePage() {
 
   // États de recherche de type Yescapa
   const [searchLocation, setSearchLocation] = useState('');
-  const [dateRange, setDateRange] = useState<{startDate: string | null, endDate: string | null}>({startDate: null, endDate: null});
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   // Comment ça marche - tab state
   const [howItWorksTab, setHowItWorksTab] = useState<'renter' | 'owner'>('renter');
@@ -53,8 +52,8 @@ export default function HomePage() {
     e.preventDefault();
     let queryStr = '?';
     if (searchLocation) queryStr += `location=${encodeURIComponent(searchLocation)}&`;
-    if (dateRange.startDate) queryStr += `startDate=${dateRange.startDate}&`;
-    if (dateRange.endDate) queryStr += `endDate=${dateRange.endDate}&`;
+    if (startDate) queryStr += `startDate=${startDate}&`;
+    if (endDate) queryStr += `endDate=${endDate}&`;
     router.push(`/vehicules${queryStr.slice(0, -1)}`);
   };
 
@@ -119,39 +118,59 @@ export default function HomePage() {
           {/* Barre de recherche style Yescapa (pill form) */}
           <form 
             onSubmit={handleSearchSubmit}
-            className="bg-white/95 backdrop-blur border border-brand-border/30 p-3 rounded-3xl md:rounded-full shadow-2xl text-brand-text max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-3 items-center text-left relative z-20"
+            className="bg-white/95 backdrop-blur border border-brand-border/30 p-2 rounded-2xl md:rounded-full shadow-2xl text-brand-text max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-2 items-center text-left"
           >
-            {/* Localisation (CustomSelect) */}
-            <div className="md:col-span-1 border-b md:border-b-0 md:border-r border-brand-border/60 pb-2 md:pb-0 md:pr-2">
-              <CustomSelect
-                label="Départ"
+            {/* Localisation */}
+            <div className="px-5 py-2.5 border-b md:border-b-0 md:border-r border-brand-border/60">
+              <label className="block text-[10px] font-extrabold uppercase text-brand-muted tracking-wider mb-1 flex items-center">
+                <MapPin className="w-3 h-3 mr-1 text-brand-accent" />
+                Départ
+              </label>
+              <select
                 value={searchLocation}
-                onChange={(v) => setSearchLocation(v)}
-                placeholder="Où partir ?"
-                searchable
-                className="border-none shadow-none !bg-transparent"
-                options={[
-                  { value: '', label: 'Où voulez-vous partir ?' },
-                  { value: 'Bordeaux', label: 'Bordeaux (Aquitaine)', icon: '🇫🇷' },
-                  { value: 'Paris', label: 'Paris (Île-de-France)', icon: '🇫🇷' },
-                  { value: 'Lyon', label: 'Lyon (Rhône-Alpes)', icon: '🇫🇷' },
-                  { value: 'Toulouse', label: 'Toulouse (Midi-Pyrénées)', icon: '🇫🇷' },
-                ]}
+                onChange={(e) => setSearchLocation(e.target.value)}
+                className="w-full bg-transparent text-sm font-bold text-brand-text focus:outline-none focus:ring-0 border-none p-0 cursor-pointer"
+              >
+                <option value="">Où voulez-vous partir ?</option>
+                <option value="Bordeaux">Bordeaux (Aquitaine)</option>
+                <option value="Paris">Paris (Île-de-France)</option>
+                <option value="Lyon">Lyon (Rhône-Alpes)</option>
+                <option value="Toulouse">Toulouse (Midi-Pyrénées)</option>
+              </select>
+            </div>
+
+            {/* Date début */}
+            <div className="px-5 py-2.5 border-b md:border-b-0 md:border-r border-brand-border/60">
+              <label className="block text-[10px] font-extrabold uppercase text-brand-muted tracking-wider mb-1 flex items-center">
+                <Calendar className="w-3 h-3 mr-1 text-brand-accent" />
+                Début location
+              </label>
+              <input
+                type="date"
+                min={new Date().toISOString().split('T')[0]}
+                value={startDate}
+                onChange={(e) => setStartDate(e.target.value)}
+                className="w-full bg-transparent text-sm font-bold text-brand-text focus:outline-none border-none p-0 cursor-pointer"
               />
             </div>
 
-            {/* Date de début et fin combinées (DateRangePicker) */}
-            <div className="md:col-span-2 border-b md:border-b-0 md:border-r border-brand-border/60 pb-2 md:pb-0 md:pr-2">
-              <DateRangePicker
-                label="Dates de voyage"
-                value={dateRange}
-                onChange={(range) => setDateRange(range)}
-                placeholder="Quand partez-vous ?"
+            {/* Date fin */}
+            <div className="px-5 py-2.5">
+              <label className="block text-[10px] font-extrabold uppercase text-brand-muted tracking-wider mb-1 flex items-center">
+                <Calendar className="w-3 h-3 mr-1 text-brand-accent" />
+                Fin location
+              </label>
+              <input
+                type="date"
+                min={startDate || new Date().toISOString().split('T')[0]}
+                value={endDate}
+                onChange={(e) => setEndDate(e.target.value)}
+                className="w-full bg-transparent text-sm font-bold text-brand-text focus:outline-none border-none p-0 cursor-pointer"
               />
             </div>
 
             {/* Bouton recherche */}
-            <div className="md:col-span-1 pt-1 md:pt-0">
+            <div className="p-1.5">
               <button
                 type="submit"
                 className="w-full flex items-center justify-center space-x-2 py-4 bg-brand-accent hover:bg-brand-accent-hover text-white rounded-xl md:rounded-full font-bold shadow-md btn-transition cursor-pointer"
@@ -177,6 +196,131 @@ export default function HomePage() {
               📍 {city}
             </button>
           ))}
+        </div>
+      </section>
+
+      {/* Cartes Promo & Avis (Yescapa Style) */}
+      <section className="py-16 bg-[#FAFBF9] px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Carte 1 */}
+          <div className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full">
+            <div className="relative h-56 overflow-hidden bg-brand-hover">
+              <img 
+                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" 
+                alt="Offres exceptionnelles" 
+                className="w-full h-full object-cover"
+              />
+              <svg 
+                viewBox="0 0 100 12" 
+                preserveAspectRatio="none" 
+                className="absolute bottom-0 left-0 w-full h-8 text-white fill-current translate-y-[1px]"
+              >
+                <path d="M0 12 C 30 0, 70 0, 100 12 Z" />
+              </svg>
+            </div>
+            <div className="p-8 flex-1 flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight">
+                  Des offres exceptionnelles toute l'année
+                </h3>
+                <p className="text-sm text-brand-muted leading-relaxed">
+                  Le camping-car est le meilleur moyen de voyager{' '}
+                  <span className="font-bold bg-[#FEF08A] px-1.5 py-0.5 rounded text-brand-text">
+                    sans se ruiner !
+                  </span>
+                </p>
+              </div>
+              <div className="mt-8">
+                <Link
+                  href="/vehicules"
+                  className="inline-flex items-center space-x-1 px-6 py-3 bg-[#FDF2F8] hover:bg-[#FCE7F3] text-[#DB2777] rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
+                >
+                  <span>Toutes les meilleures offres</span>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Carte 2 */}
+          <div className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full">
+            <div className="relative h-56 overflow-hidden bg-brand-hover">
+              <img 
+                src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80" 
+                alt="Avis Cap Aventure" 
+                className="w-full h-full object-cover"
+              />
+              <svg 
+                viewBox="0 0 100 12" 
+                preserveAspectRatio="none" 
+                className="absolute bottom-0 left-0 w-full h-8 text-white fill-current translate-y-[1px]"
+              >
+                <path d="M0 12 C 30 0, 70 0, 100 12 Z" />
+              </svg>
+            </div>
+            <div className="p-8 flex-1 flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight">
+                  Avis sur Cap Aventure, une histoire sans fin
+                </h3>
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-[#F59E0B]">
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                  </div>
+                  <span className="text-base font-extrabold text-brand-text">4,9/5</span>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-xs font-semibold text-brand-muted">
+                    Voici comment nos utilisateurs évaluent Cap Aventure !
+                  </p>
+                  <p className="text-[10px] text-brand-muted/70">
+                    Note de 4,9 sur 5 basée sur 387 831 avis
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Carte 3 */}
+          <div className="bg-brand-accent border border-brand-accent/50 rounded-[2rem] overflow-hidden hover-lift shadow-lg flex flex-col justify-between h-full text-white">
+            <div className="relative h-56 overflow-hidden bg-brand-hover">
+              <img 
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
+                alt="Propriétaire Cap Aventure" 
+                className="w-full h-full object-cover"
+              />
+              <svg 
+                viewBox="0 0 100 12" 
+                preserveAspectRatio="none" 
+                className="absolute bottom-0 left-0 w-full h-8 text-brand-accent fill-current translate-y-[1px]"
+              >
+                <path d="M0 12 C 30 0, 70 0, 100 12 Z" />
+              </svg>
+            </div>
+            <div className="p-8 flex-1 flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-xl md:text-2xl font-extrabold text-white leading-tight">
+                  Êtes-vous propriétaire ?
+                </h3>
+                <p className="text-sm text-white/90 leading-relaxed">
+                  Louez votre véhicule et tirez-en le meilleur parti en toute confiance.
+                </p>
+              </div>
+              <div className="mt-8">
+                <Link
+                  href="/admin"
+                  className="inline-flex items-center space-x-1 px-6 py-3 bg-[#DB2777] hover:bg-[#C21D5C] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-md cursor-pointer"
+                >
+                  <span>En savoir plus</span>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
