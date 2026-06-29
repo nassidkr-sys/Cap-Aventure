@@ -211,12 +211,15 @@ export default function HomePage() {
       <section className="py-16 bg-[#FAFBF9] px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Carte 1 */}
-          <div className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full">
+          <Link 
+            href="/vehicules"
+            className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full group cursor-pointer"
+          >
             <div className="relative h-56 overflow-hidden bg-brand-hover">
               <img 
                 src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" 
                 alt="Offres exceptionnelles" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <svg 
                 viewBox="0 0 100 12" 
@@ -228,7 +231,7 @@ export default function HomePage() {
             </div>
             <div className="p-8 flex-1 flex flex-col justify-between">
               <div className="space-y-4">
-                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight">
+                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight group-hover:text-brand-accent transition-colors duration-250">
                   Des offres exceptionnelles toute l'année
                 </h3>
                 <p className="text-sm text-brand-muted leading-relaxed">
@@ -239,24 +242,24 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="mt-8">
-                <Link
-                  href="/vehicules"
-                  className="inline-flex items-center space-x-1 px-6 py-3 bg-[#FDF2F8] hover:bg-[#FCE7F3] text-[#DB2777] rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
-                >
+                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#FDF2F8] group-hover:bg-[#FCE7F3] text-[#DB2777] rounded-full text-xs font-bold transition-all duration-200">
                   <span>Toutes les meilleures offres</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                </Link>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+                </span>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Carte 2 */}
-          <div className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full">
+          <Link 
+            href="/avis"
+            className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full group cursor-pointer"
+          >
             <div className="relative h-56 overflow-hidden bg-brand-hover">
               <img 
                 src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80" 
                 alt="Avis Cap Aventure" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <svg 
                 viewBox="0 0 100 12" 
@@ -268,7 +271,7 @@ export default function HomePage() {
             </div>
             <div className="p-8 flex-1 flex flex-col justify-between">
               <div className="space-y-4">
-                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight">
+                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight group-hover:text-brand-accent transition-colors duration-250">
                   Avis sur Cap Aventure, une histoire sans fin
                 </h3>
                 <div className="flex items-center space-x-2">
@@ -291,24 +294,24 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="mt-8">
-                <Link
-                  href="/avis"
-                  className="inline-flex items-center space-x-1 px-6 py-3 bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#2563EB] rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
-                >
+                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#EFF6FF] group-hover:bg-[#DBEAFE] text-[#2563EB] rounded-full text-xs font-bold transition-all duration-200">
                   <span>Consulter tous les avis</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                </Link>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+                </span>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Carte 3 */}
-          <div className="bg-brand-accent border border-brand-accent/50 rounded-[2rem] overflow-hidden hover-lift shadow-lg flex flex-col justify-between h-full text-white">
+          <Link 
+            href="/admin"
+            className="bg-brand-accent border border-brand-accent/50 rounded-[2rem] overflow-hidden hover-lift shadow-lg flex flex-col justify-between h-full text-white group cursor-pointer"
+          >
             <div className="relative h-56 overflow-hidden bg-brand-hover">
               <img 
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
                 alt="Propriétaire Cap Aventure" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <svg 
                 viewBox="0 0 100 12" 
@@ -328,16 +331,13 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="mt-8">
-                <Link
-                  href="/admin"
-                  className="inline-flex items-center space-x-1 px-6 py-3 bg-[#DB2777] hover:bg-[#C21D5C] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-md cursor-pointer"
-                >
+                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#DB2777] group-hover:bg-[#C21D5C] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-md">
                   <span>En savoir plus</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                </Link>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+                </span>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
