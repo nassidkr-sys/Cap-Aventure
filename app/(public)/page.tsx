@@ -336,8 +336,8 @@ export default function HomePage() {
       <section className="py-24 px-6 max-w-7xl mx-auto w-full space-y-16">
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 lg:gap-16">
           <div className="lg:w-5/12 space-y-6">
-            <div className="space-y-3">
-              <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block">
+            <div className="space-y-3 flex flex-col items-center">
+              <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block text-center">
                 Choisissez le bon véhicule
               </span>
               <div className="h-1.5 w-16 bg-[#DB2777] rounded-full"></div>
