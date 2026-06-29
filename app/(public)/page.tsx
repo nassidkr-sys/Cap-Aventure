@@ -226,7 +226,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="mt-8">
-                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#FEF9EC] group-hover:bg-[#FEF3CD] text-[#C9A035] rounded-full text-xs font-bold transition-all duration-200">
+                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#FEFCF3] group-hover:bg-[#FEF8E8] text-[#C9A035] rounded-full text-xs font-bold transition-all duration-200">
                   <span>Toutes les meilleures offres</span>
                   <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
                 </span>
@@ -371,7 +371,7 @@ export default function HomePage() {
                       </linearGradient>
                       <linearGradient id="canvasGrad" x1="0" y1="1" x2="0" y2="0">
                         <stop offset="0%" stopColor="#F472B6" />
-                        <stop offset="100%" stopColor="#FEF3CD" />
+                        <stop offset="100%" stopColor="#FEF8E8" />
                       </linearGradient>
                     </defs>
                     <path d="M 52 46 L 148 20 L 140 46 Z" fill="url(#canvasGrad)" stroke="#1E293B" strokeWidth="2" strokeLinejoin="round" />
@@ -1043,7 +1043,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 href="/avis"
-                className="px-6 py-3.5 bg-[#FEF3CD] hover:bg-[#EDD9A3] text-[#C9A035] rounded-full text-xs font-bold transition-all duration-200 text-center cursor-pointer"
+                className="px-6 py-3.5 bg-[#FEF8E8] hover:bg-[#FEF0C7] text-[#C9A035] rounded-full text-xs font-bold transition-all duration-200 text-center cursor-pointer"
               >
                 Lire les avis sur Cap Aventure
               </Link>

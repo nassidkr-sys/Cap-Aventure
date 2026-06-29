@@ -100,7 +100,7 @@ export default function PhotosCommunautePage() {
   };
 
   return (
-    <main className="flex-1 bg-brand-beige min-h-screen pb-24 relative overflow-hidden">
+    <main className="flex-1 bg-white min-h-screen pb-24 relative overflow-hidden">
       {/* Background grain noise visual overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] grain-bg"></div>
 
@@ -167,7 +167,7 @@ export default function PhotosCommunautePage() {
               onClick={() => setSelectedPhoto(photo)}
               className="group bg-white border border-brand-border rounded-3xl overflow-hidden hover-lift shadow-sm cursor-pointer flex flex-col justify-between"
             >
-              <div className="relative h-60 overflow-hidden bg-brand-hover">
+              <div className="relative h-60 overflow-hidden bg-[#F2F2F0]">
                 <img 
                   src={photo.url} 
                   alt={photo.location} 
@@ -188,7 +188,7 @@ export default function PhotosCommunautePage() {
                 </div>
                 <button
                   onClick={(e) => handleLike(photo.id, e)}
-                  className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-full border border-brand-border/60 hover:bg-brand-hover text-brand-muted hover:text-[#C9A035] transition-all cursor-pointer"
+                  className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-full border border-brand-border/60 hover:bg-[#F2F2F0] text-brand-muted hover:text-[#C9A035] transition-all cursor-pointer"
                 >
                   <Heart className="w-3.5 h-3.5 fill-current" />
                   <span className="text-[10px] font-extrabold font-mono">{photo.likes}</span>
@@ -204,7 +204,7 @@ export default function PhotosCommunautePage() {
             <button
               onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
-              className="p-2 border border-brand-border rounded-xl bg-white hover:bg-brand-hover text-brand-text disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer transition-all"
+              className="p-2 border border-brand-border rounded-xl bg-white hover:bg-[#F2F2F0] text-brand-text disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer transition-all"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -217,7 +217,7 @@ export default function PhotosCommunautePage() {
                   className={`w-9 h-9 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
                     currentPage === pg
                       ? 'bg-brand-accent border-brand-accent text-white shadow-md shadow-brand-accent/15'
-                      : 'bg-white border-brand-border text-brand-text hover:bg-brand-hover'
+                      : 'bg-white border-brand-border text-brand-text hover:bg-[#F2F2F0]'
                   }`}
                 >
                   {pg}
@@ -227,7 +227,7 @@ export default function PhotosCommunautePage() {
             <button
               onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
-              className="p-2 border border-brand-border rounded-xl bg-white hover:bg-brand-hover text-brand-text disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer transition-all"
+              className="p-2 border border-brand-border rounded-xl bg-white hover:bg-[#F2F2F0] text-brand-text disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer transition-all"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -283,7 +283,7 @@ export default function PhotosCommunautePage() {
               <div className="border-t border-brand-border/60 pt-6 flex items-center justify-between">
                 <button
                   onClick={(e) => handleLike(selectedPhoto.id, e)}
-                  className="flex items-center space-x-2 px-4 py-2 rounded-full border border-brand-border/60 hover:bg-brand-hover text-[#C9A035] font-bold text-xs transition-all cursor-pointer"
+                  className="flex items-center space-x-2 px-4 py-2 rounded-full border border-brand-border/60 hover:bg-[#F2F2F0] text-[#C9A035] font-bold text-xs transition-all cursor-pointer"
                 >
                   <Heart className="w-4 h-4 fill-current" />
                   <span>J'aime ({selectedPhoto.likes})</span>

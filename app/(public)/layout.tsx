@@ -152,18 +152,18 @@ export default function PublicLayout({
       </div>
 
       {/* ——— Blog & Newsletter Banner (Above Footer) ——— */}
-      <section className="bg-[#F8FAFC] border-t border-[#E2E8F0] py-16 px-6 w-full">
+      <section className="bg-[#FFFFFF] border-t border-[#E2E8F0] py-16 px-6 w-full">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Left — Blog promo */}
           <div className="space-y-6">
             <div className="space-y-1">
               <span className="text-[#C9A035] font-extrabold text-[10px] uppercase tracking-widest block">Le Blog Cap Aventure</span>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-[#1E293B] tracking-tight leading-tight">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#1C2B4A] tracking-tight leading-tight">
                 Inspirations, conseils & récits<br/>de voyage en camping-car
               </h2>
             </div>
-            <p className="text-sm text-[#64748B] leading-relaxed max-w-md">
+            <p className="text-sm text-[#6B7A94] leading-relaxed max-w-md">
               Itinéraires incontournables, astuces de vanlifers chevronnés, témoignages de la communauté… Tout ce dont vous avez besoin pour préparer le road trip de vos rêves.
             </p>
             {/* Polaroid stack decoration */}
@@ -180,7 +180,7 @@ export default function PublicLayout({
             </div>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#1E293B] text-white rounded-xl text-xs font-bold hover:bg-[#0F172A] transition-colors duration-200 shadow-sm hover:shadow-md"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#1C2B4A] text-white rounded-xl text-xs font-bold hover:bg-[#0F172A] transition-colors duration-200 shadow-sm hover:shadow-md"
             >
               Lire le blog
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
@@ -191,19 +191,19 @@ export default function PublicLayout({
           <div className="bg-white rounded-3xl border border-[#E2E8F0] p-10 shadow-sm space-y-6">
             <div className="space-y-1">
               <span className="text-[#C9A035] font-extrabold text-[10px] uppercase tracking-widest block">Newsletter</span>
-              <h3 className="text-xl font-extrabold text-[#1E293B] leading-tight">
+              <h3 className="text-xl font-extrabold text-[#1C2B4A] leading-tight">
                 Les meilleures destinations<br/>directement dans votre boîte mail
               </h3>
             </div>
-            <p className="text-sm text-[#64748B] leading-relaxed">
-              Rejoignez <strong className="text-[#1E293B] font-extrabold">+12 000 aventuriers</strong> et recevez chaque semaine nos suggestions d'itinéraires et offres exclusives.
+            <p className="text-sm text-[#6B7A94] leading-relaxed">
+              Rejoignez <strong className="text-[#1C2B4A] font-extrabold">+12 000 aventuriers</strong> et recevez chaque semaine nos suggestions d'itinéraires et offres exclusives.
             </p>
             <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
               <div className="relative">
                 <input
                   type="email"
                   placeholder="Votre adresse email"
-                  className="w-full px-5 py-3.5 bg-[#F8FAFC] border-2 border-[#E2E8F0] rounded-2xl text-sm font-semibold text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#C9A035] focus:ring-4 focus:ring-[#C9A035]/10 transition-all duration-200"
+                  className="w-full px-5 py-3.5 bg-[#FFFFFF] border-2 border-[#E2E8F0] rounded-2xl text-sm font-semibold text-[#1C2B4A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#C9A035] focus:ring-4 focus:ring-[#C9A035]/10 transition-all duration-200"
                 />
               </div>
               <button
@@ -219,7 +219,7 @@ export default function PublicLayout({
       </section>
 
       {/* ——— Footer Light (Yescapa Style) ——— */}
-      <footer className="bg-[#F1F5F9] border-t border-[#E2E8F0] py-16 mt-auto">
+      <footer className="bg-[#F5F5F3] border-t border-[#E2E8F0] py-16 mt-auto">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Top row: Logo + 4 columns */}
@@ -228,7 +228,7 @@ export default function PublicLayout({
             {/* Logo + baseline */}
             <div className="col-span-2 md:col-span-1 space-y-4">
               <CapAventureLogo variant="compact" />
-              <p className="text-xs text-[#64748B] leading-relaxed max-w-[180px]">
+              <p className="text-xs text-[#6B7A94] leading-relaxed max-w-[180px]">
                 La location de camping-cars entre particuliers en France & Belgique.
               </p>
               {/* Social icons */}
@@ -253,8 +253,8 @@ export default function PublicLayout({
 
             {/* Voyageurs */}
             <div className="space-y-4">
-              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-[#1E293B]">Voyageurs</h4>
-              <ul className="space-y-2.5 text-xs text-[#64748B]">
+              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-[#1C2B4A]">Voyageurs</h4>
+              <ul className="space-y-2.5 text-xs text-[#6B7A94]">
                 {[
                   { label: 'Comment ça fonctionne', href: '/#comment-ca-marche' },
                   { label: 'Louer un véhicule', href: '/vehicules' },
@@ -273,8 +273,8 @@ export default function PublicLayout({
 
             {/* Propriétaires */}
             <div className="space-y-4">
-              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-[#1E293B]">Propriétaires</h4>
-              <ul className="space-y-2.5 text-xs text-[#64748B]">
+              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-[#1C2B4A]">Propriétaires</h4>
+              <ul className="space-y-2.5 text-xs text-[#6B7A94]">
                 {[
                   { label: 'Créer une annonce', href: '/proprietaire' },
                   { label: 'Contrat de location', href: '/proprietaire' },
@@ -293,8 +293,8 @@ export default function PublicLayout({
 
             {/* Cap Aventure */}
             <div className="space-y-4">
-              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-[#1E293B]">Cap Aventure</h4>
-              <ul className="space-y-2.5 text-xs text-[#64748B]">
+              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-[#1C2B4A]">Cap Aventure</h4>
+              <ul className="space-y-2.5 text-xs text-[#6B7A94]">
                 {[
                   { label: 'Qui sommes-nous ?', href: '/contact' },
                   { label: 'Le blog', href: '/blog' },
@@ -313,8 +313,8 @@ export default function PublicLayout({
 
             {/* Contact */}
             <div className="space-y-4">
-              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-[#1E293B]">Contact</h4>
-              <ul className="space-y-2.5 text-xs text-[#64748B]">
+              <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-[#1C2B4A]">Contact</h4>
+              <ul className="space-y-2.5 text-xs text-[#6B7A94]">
                 <li className="font-medium">14 Av. de la Liberté</li>
                 <li className="font-medium">33000 Bordeaux, France</li>
                 <li><a href="mailto:contact@cap-aventure.fr" className="hover:text-[#C9A035] transition-colors font-medium">contact@cap-aventure.fr</a></li>
@@ -328,10 +328,10 @@ export default function PublicLayout({
           <div className="pt-8 border-t border-[#E2E8F0] flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-[#94A3B8]">
             <p>© {new Date().getFullYear()} Cap Aventure SAS. Tous droits réservés.</p>
             <div className="flex items-center gap-5">
-              <Link href="/mentions-legales" className="hover:text-[#1E293B] transition-colors font-medium">Mentions légales</Link>
-              <Link href="/confidentialite" className="hover:text-[#1E293B] transition-colors font-medium">Confidentialité</Link>
-              <Link href="/cgu" className="hover:text-[#1E293B] transition-colors font-medium">CGU</Link>
-              <Link href="/cookies" className="hover:text-[#1E293B] transition-colors font-medium">Cookies</Link>
+              <Link href="/mentions-legales" className="hover:text-[#1C2B4A] transition-colors font-medium">Mentions légales</Link>
+              <Link href="/confidentialite" className="hover:text-[#1C2B4A] transition-colors font-medium">Confidentialité</Link>
+              <Link href="/cgu" className="hover:text-[#1C2B4A] transition-colors font-medium">CGU</Link>
+              <Link href="/cookies" className="hover:text-[#1C2B4A] transition-colors font-medium">Cookies</Link>
             </div>
           </div>
         </div>
