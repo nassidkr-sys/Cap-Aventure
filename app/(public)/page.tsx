@@ -1129,7 +1129,68 @@ export default function HomePage() {
         )}
       </section>
 
-      {/* 6. Pourquoi louer chez nous (Value Prop) */}
+      {/* 7. Bannière Propriétaire (Teal Owner Banner) */}
+      <section className="bg-[#084255] text-white py-16 px-8 border-b border-[#05303e] w-full">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center justify-between">
+          
+          {/* Left Column: Heading & CTAs */}
+          <div className="space-y-8 lg:max-w-xl">
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight leading-snug">
+              Vous êtes propriétaire d'un camping-car ? <br />
+              <span className="text-[#38BDF8]">Louez-le et gagnez jusqu'à 10 000 € par an.</span>
+            </h2>
+            <div className="flex flex-wrap gap-4">
+              <Link 
+                href="/proprietaire"
+                className="px-6 py-3.5 bg-[#DB2777] hover:bg-[#C21D5C] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-lg cursor-pointer"
+              >
+                Créez votre annonce
+              </Link>
+              <Link 
+                href="/proprietaire"
+                className="px-6 py-3.5 bg-[#0C5A71] hover:bg-[#094759] border border-white/10 text-white rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
+              >
+                En savoir plus
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column: 3 Steps */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:max-w-2xl w-full">
+            
+            {/* Step 1 */}
+            <div className="space-y-3">
+              <span className="text-2xl font-black text-[#38BDF8] font-mono block">01</span>
+              <h4 className="font-bold text-sm text-white">Créez votre annonce</h4>
+              <p className="text-[11px] text-[#E0F2FE] leading-relaxed font-medium">
+                Vous avez un contrôle total sur votre calendrier de réservation et vos tarifs de location.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="space-y-3">
+              <span className="text-2xl font-black text-[#38BDF8] font-mono block">02</span>
+              <h4 className="font-bold text-sm text-white">Recevoir des demandes</h4>
+              <p className="text-[11px] text-[#E0F2FE] leading-relaxed font-medium">
+                Gérez facilement vos demandes de réservation via votre tableau de bord.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="space-y-3">
+              <span className="text-2xl font-black text-[#38BDF8] font-mono block">03</span>
+              <h4 className="font-bold text-sm text-white">Commencez à gagner</h4>
+              <p className="text-[11px] text-[#E0F2FE] leading-relaxed font-medium">
+                Recevez vos gains via notre système de paiement sécurisé par un tiers.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* 8. Pourquoi louer chez nous (Value Prop) */}
       <section className="py-24 px-6 max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center border-t border-brand-border">
         <div className="space-y-6">
           <span className="text-brand-accent font-extrabold text-xs uppercase tracking-widest block">Notre Promesse</span>
