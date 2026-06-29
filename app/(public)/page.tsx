@@ -878,7 +878,188 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Comment ça marche Section (Dynamic tab) */}
+      {/* 5. Section Avis & Communauté (Yescapa Style) */}
+      <section className="py-24 px-6 bg-white border-b border-brand-border">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          {/* Left Column: Staggered Masonry Collage */}
+          <div className="grid grid-cols-3 gap-4">
+            
+            {/* Column 1 */}
+            <div className="flex flex-col gap-4">
+              <div className="relative h-44 rounded-2xl overflow-hidden border border-brand-border/60 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=300&q=80" 
+                  alt="Andréi"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-3 left-3 text-white text-[10px] leading-tight">
+                  <p className="font-extrabold">Andréi</p>
+                  <p className="text-white/70 font-semibold font-mono">Février 2026</p>
+                </div>
+              </div>
+              <div className="relative h-56 rounded-2xl overflow-hidden border border-brand-border/60 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" 
+                  alt="Ruslan"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-3 left-3 text-white text-[10px] leading-tight">
+                  <p className="font-extrabold">Ruslan</p>
+                  <p className="text-white/70 font-semibold font-mono">Octobre 2025</p>
+                </div>
+              </div>
+              <div className="relative h-44 rounded-2xl overflow-hidden border border-brand-border/60 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" 
+                  alt="Tracy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-3 left-3 text-white text-[10px] leading-tight">
+                  <p className="font-extrabold">Tracy</p>
+                  <p className="text-white/70 font-semibold font-mono">Octobre 2025</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Column 2 */}
+            <div className="flex flex-col gap-4 mt-6">
+              <div className="relative h-56 rounded-2xl overflow-hidden border border-brand-border/60 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" 
+                  alt="Vyacheslav"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-3 left-3 text-white text-[10px] leading-tight">
+                  <p className="font-extrabold">Vyacheslav</p>
+                  <p className="text-white/70 font-semibold font-mono">Août 2025</p>
+                </div>
+              </div>
+              <div className="relative h-44 rounded-2xl overflow-hidden border border-brand-border/60 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80" 
+                  alt="Krisztina"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-3 left-3 text-white text-[10px] leading-tight">
+                  <p className="font-extrabold">Krisztina</p>
+                  <p className="text-white/70 font-semibold font-mono">Décembre 2024</p>
+                </div>
+              </div>
+              <div className="relative h-56 rounded-2xl overflow-hidden border border-brand-border/60 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" 
+                  alt="Parastu"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-3 left-3 text-white text-[10px] leading-tight">
+                  <p className="font-extrabold">Parastu</p>
+                  <p className="text-white/70 font-semibold font-mono">Septembre 2025</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Column 3 */}
+            <div className="flex flex-col gap-4">
+              <div className="relative h-44 rounded-2xl overflow-hidden border border-brand-border/60 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=300&q=80" 
+                  alt="Tanya"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-3 left-3 text-white text-[10px] leading-tight">
+                  <p className="font-extrabold">Tanya</p>
+                  <p className="text-white/70 font-semibold font-mono">Juillet 2024</p>
+                </div>
+              </div>
+              <div className="relative h-44 rounded-2xl overflow-hidden border border-brand-border/60 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80" 
+                  alt="Johannes"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-3 left-3 text-white text-[10px] leading-tight">
+                  <p className="font-extrabold">Johannes</p>
+                  <p className="text-white/70 font-semibold font-mono">Avril 2024</p>
+                </div>
+              </div>
+              <div className="relative h-56 rounded-2xl overflow-hidden border border-brand-border/60 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80" 
+                  alt="David"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-3 left-3 text-white text-[10px] leading-tight">
+                  <p className="font-extrabold">David</p>
+                  <p className="text-white/70 font-semibold font-mono">Avril 2024</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Right Column: Text & CTAs */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block">
+                  Rencontrez la communauté
+                </span>
+                <div className="h-1 w-12 bg-[#DB2777] rounded-full"></div>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-brand-text tracking-tight leading-tight">
+                Avis sur Cap Aventure, une histoire sans fin
+              </h2>
+              
+              {/* Ratings */}
+              <div className="flex items-center space-x-2 pt-2">
+                <div className="flex text-[#F59E0B]">
+                  <Star className="w-6 h-6 fill-current" />
+                  <Star className="w-6 h-6 fill-current" />
+                  <Star className="w-6 h-6 fill-current" />
+                  <Star className="w-6 h-6 fill-current" />
+                  <Star className="w-6 h-6 fill-current" />
+                </div>
+              </div>
+              <p className="text-sm font-extrabold text-brand-text">
+                Service noté 4,9 /5 sur la base de 387 831 avis d'utilisateurs
+              </p>
+              
+              <p className="text-xs md:text-sm text-brand-muted leading-relaxed">
+                Nos utilisateurs nous attribuent 5 étoiles ! Découvrez les avis authentiques de voyageurs et de propriétaires sur notre plateforme de location de camping-cars, trouvez le camping-car idéal pour votre aventure ou louez vous-même.
+              </p>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                href="/avis"
+                className="px-6 py-3.5 bg-[#FCE7F3] hover:bg-[#FBCFE8] text-[#DB2777] rounded-full text-xs font-bold transition-all duration-200 text-center cursor-pointer"
+              >
+                Lire les avis sur Cap Aventure
+              </Link>
+              <Link 
+                href="/vehicules"
+                className="px-6 py-3.5 bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#2563EB] rounded-full text-xs font-bold transition-all duration-200 text-center cursor-pointer"
+              >
+                Découvrez les photos de notre communauté
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 6. Comment ça marche Section (Dynamic tab) */}
       <section className="py-24 px-6 max-w-6xl mx-auto w-full space-y-12">
         <div className="text-center space-y-4">
           <span className="text-brand-accent font-extrabold text-xs uppercase tracking-widest block">Fonctionnement</span>
