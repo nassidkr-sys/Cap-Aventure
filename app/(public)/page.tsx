@@ -304,7 +304,7 @@ export default function HomePage() {
 
           {/* Carte 3 */}
           <Link 
-            href="/admin"
+            href="/proprietaire"
             className="bg-brand-accent border border-brand-accent/50 rounded-[2rem] overflow-hidden hover-lift shadow-lg flex flex-col justify-between h-full text-white group cursor-pointer"
           >
             <div className="relative h-56 overflow-hidden bg-brand-hover">
