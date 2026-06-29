@@ -290,6 +290,15 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
+              <div className="mt-8">
+                <Link
+                  href="/avis"
+                  className="inline-flex items-center space-x-1 px-6 py-3 bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#2563EB] rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
+                >
+                  <span>Consulter tous les avis</span>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -334,23 +343,19 @@ export default function HomePage() {
 
       {/* 3. Catégories Section */}
       <section className="py-24 px-6 max-w-7xl mx-auto w-full space-y-16">
-        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 lg:gap-16">
-          <div className="lg:w-5/12 space-y-6">
-            <div className="space-y-3 flex flex-col items-center">
-              <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block text-center">
-                Choisissez le bon véhicule
-              </span>
-              <div className="h-1.5 w-16 bg-[#DB2777] rounded-full"></div>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
-              Vous recherchez un camping-car ou un fourgon aménagé ?
-            </h2>
+        <div className="text-center max-w-3xl mx-auto space-y-6">
+          <div className="space-y-3 flex flex-col items-center">
+            <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block text-center">
+              Choisissez le bon véhicule
+            </span>
+            <div className="h-1.5 w-16 bg-[#DB2777] rounded-full"></div>
           </div>
-          <div className="lg:w-6/12">
-            <p className="text-sm md:text-base text-brand-muted leading-relaxed">
-              Les meilleurs road trips commencent par les bonnes questions. Pour la location d'un camping-car ou d'un fourgon aménagé, chaque projet de voyage a son véhicule. Nous vous aiderons à choisir celui qui vous convient le mieux, pour que votre voyage commence du bon pied.
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
+            Vous recherchez un camping-car ou un fourgon aménagé ?
+          </h2>
+          <p className="text-sm md:text-base text-brand-muted leading-relaxed max-w-2xl mx-auto">
+            Les meilleurs road trips commencent par les bonnes questions. Pour la location d'un camping-car ou d'un fourgon aménagé, chaque projet de voyage a son véhicule. Nous vous aiderons à choisir celui qui vous convient le mieux, pour que votre voyage commence du bon pied.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -366,65 +371,156 @@ export default function HomePage() {
                 
                 {/* Inline SVG Illustrations */}
                 {cat.illustration === 'poptop' && (
-                  <svg viewBox="0 0 200 120" className="w-48 h-28 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:translate-y-[-4px]">
-                    <path d="M 45 42 L 135 20 L 130 42 Z" fill="#F1F5F9" stroke="#1E293B" strokeWidth="2" strokeLinejoin="round" />
-                    <path d="M 130 20 L 133 42" stroke="#1E293B" strokeWidth="1.5" />
-                    <line x1="43" y1="42" x2="142" y2="42" stroke="#1E293B" strokeWidth="3.5" strokeLinecap="round" />
-                    <path d="M 32 82 L 32 46 C 32 44, 34 42, 37 42 L 152 42 C 160 42, 166 48, 168 56 L 172 74 C 173 78, 171 82, 167 82 Z" fill="#2DD4BF" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="42" y="48" width="34" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="84" y="48" width="34" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 126 48 L 152 48 C 156 48, 159 51, 160 55 L 162 63 L 126 63 Z" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <circle cx="62" cy="82" r="14" fill="#1E293B" />
-                    <circle cx="62" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
-                    <circle cx="138" cy="82" r="14" fill="#1E293B" />
-                    <circle cx="138" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
-                    <line x1="32" y1="69" x2="171" y2="69" stroke="#1E293B" strokeWidth="1.5" />
+                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="bodyGrad1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#2DD4BF" />
+                        <stop offset="100%" stopColor="#0D9488" />
+                      </linearGradient>
+                      <linearGradient id="windowGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stopColor="#7DD3FC" />
+                        <stop offset="100%" stopColor="#0284C7" />
+                      </linearGradient>
+                      <linearGradient id="roofGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#F8FAFC" />
+                        <stop offset="100%" stopColor="#CBD5E1" />
+                      </linearGradient>
+                      <linearGradient id="canvasGrad" x1="0" y1="1" x2="0" y2="0">
+                        <stop offset="0%" stopColor="#F472B6" />
+                        <stop offset="100%" stopColor="#FCE7F3" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M 52 46 L 148 20 L 140 46 Z" fill="url(#canvasGrad)" stroke="#1E293B" strokeWidth="2" strokeLinejoin="round" />
+                    <line x1="140" y1="22" x2="132" y2="46" stroke="#DB2777" strokeWidth="1.5" opacity="0.6" />
+                    <line x1="96" y1="33" x2="90" y2="46" stroke="#DB2777" strokeWidth="1.5" opacity="0.6" />
+                    <path d="M 48 46 L 154 18 L 152 23 L 50 46 Z" fill="url(#roofGrad)" stroke="#1E293B" strokeWidth="1.5" />
+                    <line x1="50" y1="46" x2="162" y2="46" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
+                    <path d="M 36 94 L 36 50 C 36 48, 38 46, 42 46 L 180 46 C 190 46, 196 52, 198 62 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad1)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 36 76 L 36 94 L 195 94 C 197 94, 198 92, 199 90 L 201 80 L 190 76 Z" fill="#F8FAFC" opacity="0.9" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="198" y="68" width="4" height="12" rx="1" fill="#1E293B" />
+                    <path d="M 197 62 L 202 62 L 201 68 L 196 68 Z" fill="#FDE047" stroke="#1E293B" strokeWidth="1.5" />
+                    <path d="M 186 94 L 204 94 C 206 94, 208 96, 206 98 L 202 102 L 186 102 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 32 94 L 40 94 L 40 102 L 34 102 C 32 102, 31 100, 32 98 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="48" y="52" width="40" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="96" y="52" width="42" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 146 52 L 180 52 C 185 52, 188 56, 189 60 L 191 70 L 146 70 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="56" y1="55" x2="68" y2="67" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="104" y1="55" x2="116" y2="67" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="154" y1="55" x2="166" y2="67" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <path d="M 92 46 L 92 94" stroke="#1E293B" strokeWidth="1.5" opacity="0.5" />
+                    <path d="M 142 46 L 142 94" stroke="#1E293B" strokeWidth="1.5" opacity="0.5" />
+                    <rect x="146" y="74" width="8" height="3" rx="1" fill="#334155" stroke="#1E293B" strokeWidth="1" />
+                    <circle cx="70" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="70" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="70" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="158" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
                   </svg>
                 )}
                 {cat.illustration === 'grand' && (
-                  <svg viewBox="0 0 200 120" className="w-48 h-28 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:translate-y-[-4px]">
-                    <path d="M 20 54 L 32 54 M 20 66 L 32 66 M 22 50 L 22 70" stroke="#475569" strokeWidth="2" strokeLinecap="round" />
-                    <circle cx="22" cy="54" r="3" stroke="#475569" strokeWidth="1.5" fill="none" />
-                    <circle cx="22" cy="66" r="3" stroke="#475569" strokeWidth="1.5" fill="none" />
-                    <path d="M 32 82 L 32 40 C 32 38, 34 36, 37 36 L 152 36 C 158 36, 164 41, 166 48 L 172 74 C 173 78, 171 82, 167 82 Z" fill="#64748B" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 37 36 C 37 33, 42 30, 48 30 L 140 30 C 145 30, 148 33, 148 36 Z" fill="#64748B" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="42" y="44" width="42" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="92" y="44" width="30" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 130 44 L 154 44 C 158 44, 161 47, 162 51 L 164 59 L 130 59 Z" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <circle cx="62" cy="82" r="14" fill="#1E293B" />
-                    <circle cx="62" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
-                    <circle cx="138" cy="82" r="14" fill="#1E293B" />
-                    <circle cx="138" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
-                    <line x1="32" y1="66" x2="171" y2="66" stroke="#1E293B" strokeWidth="1.5" />
+                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="bodyGrad2" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#475569" />
+                        <stop offset="100%" stopColor="#1E293B" />
+                      </linearGradient>
+                      <linearGradient id="stripeGrad2" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#60A5FA" />
+                        <stop offset="100%" stopColor="#3B82F6" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M 22 60 L 36 60 M 22 74 L 36 74 M 24 54 L 24 80" stroke="#334155" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 18 56 Q 18 50, 24 50 Q 30 50, 30 56 Z" fill="none" stroke="#475569" strokeWidth="1.5" />
+                    <circle cx="24" cy="60" r="4" stroke="#1E293B" strokeWidth="1.5" fill="#E2E8F0" />
+                    <circle cx="24" cy="74" r="4" stroke="#1E293B" strokeWidth="1.5" fill="#E2E8F0" />
+                    <path d="M 36 94 L 36 44 C 36 42, 38 40, 42 40 L 182 40 C 190 40, 196 46, 198 56 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad2)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 42 40 C 42 34, 48 30, 56 30 L 168 30 C 174 30, 178 34, 178 40 Z" fill="url(#bodyGrad2)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="56" y1="36" x2="164" y2="36" stroke="#334155" strokeWidth="1.5" />
+                    <path d="M 36 78 Q 80 66, 120 78 T 198 72 L 199 78 Q 140 84, 36 84 Z" fill="url(#stripeGrad2)" stroke="#1E293B" strokeWidth="1.5" opacity="0.85" />
+                    <path d="M 197 62 L 202 62 L 201 68 L 196 68 Z" fill="#FDE047" stroke="#1E293B" strokeWidth="1.5" />
+                    <path d="M 186 94 L 204 94 C 206 94, 208 96, 206 98 L 202 102 L 186 102 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 32 94 L 40 94 L 40 102 L 34 102 C 32 102, 31 100, 32 98 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="48" y="46" width="54" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="110" y="46" width="38" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 156 46 L 182 46 C 187 46, 190 50, 191 54 L 193 64 L 156 64 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="56" y1="49" x2="72" y2="61" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="116" y1="49" x2="128" y2="61" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="162" y1="49" x2="174" y2="61" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <circle cx="70" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="70" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="70" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="158" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
                   </svg>
                 )}
                 {cat.illustration === 'discreet' && (
-                  <svg viewBox="0 0 200 120" className="w-48 h-28 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:translate-y-[-4px]">
-                    <path d="M 32 82 L 32 42 C 32 40, 34 38, 37 38 L 150 38 C 156 38, 162 43, 164 50 L 170 74 C 171 78, 169 82, 165 82 Z" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 37 38 L 140 38 L 140 34 C 140 34, 138 32, 134 32 L 44 32 C 40 32, 37 34, 37 34 Z" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="44" y="44" width="38" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="90" y="44" width="34" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 132 44 L 154 44 C 157 44, 159 47, 160 50 L 162 59 L 132 59 Z" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <circle cx="62" cy="82" r="14" fill="#1E293B" />
-                    <circle cx="62" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
-                    <circle cx="138" cy="82" r="14" fill="#1E293B" />
-                    <circle cx="138" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
-                    <line x1="32" y1="67" x2="168" y2="67" stroke="#1E293B" strokeWidth="1.5" />
+                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="bodyGrad3" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#FFFFFF" />
+                        <stop offset="100%" stopColor="#E2E8F0" />
+                      </linearGradient>
+                      <linearGradient id="stripeGrad3" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#FCD34D" />
+                        <stop offset="100%" stopColor="#F59E0B" />
+                      </linearGradient>
+                    </defs>
+                    <rect x="74" y="27" width="28" height="6" rx="2" fill="#94A3B8" stroke="#1E293B" strokeWidth="1.5" />
+                    <rect x="112" y="29" width="34" height="4" rx="1" fill="#475569" stroke="#1E293B" strokeWidth="1.5" />
+                    <path d="M 36 94 L 36 40 C 36 38, 38 36, 42 36 L 180 36 C 188 36, 194 41, 196 50 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad3)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 42 36 L 176 36 L 174 32 C 174 32, 172 30, 166 30 L 52 30 C 46 30, 42 32, 42 32 Z" fill="url(#bodyGrad3)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 36 78 Q 70 70, 110 82 T 184 76 L 184 80 Q 140 86, 36 84 Z" fill="url(#stripeGrad3)" opacity="0.8" stroke="#1E293B" strokeWidth="1" />
+                    <path d="M 197 62 L 202 62 L 201 68 L 196 68 Z" fill="#FDE047" stroke="#1E293B" strokeWidth="1.5" />
+                    <path d="M 36 84 L 52 84 C 58 84, 62 82, 64 78 L 74 78 C 76 82, 80 84, 86 84 L 142 84 C 148 84, 152 82, 154 78 L 164 78 C 166 82, 170 84, 176 84 L 196 84 C 198 84, 200 86, 201 88 L 202 94 L 36 94 Z" fill="#334155" opacity="0.2" />
+                    <path d="M 186 94 L 204 94 C 206 94, 208 96, 206 98 L 202 102 L 186 102 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 32 94 L 40 94 L 40 102 L 34 102 C 32 102, 31 100, 32 98 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="48" y="44" width="46" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="102" y="44" width="42" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 152 44 L 180 44 C 184 44, 187 48, 188 52 L 190 62 L 152 62 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="56" y1="47" x2="72" y2="59" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="110" y1="47" x2="122" y2="59" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <circle cx="70" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="70" cy="94" r="12" fill="#475569" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="70" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="158" cy="94" r="12" fill="#475569" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
                   </svg>
                 )}
                 {cat.illustration === 'profile' && (
-                  <svg viewBox="0 0 200 120" className="w-48 h-28 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:translate-y-[-4px]">
-                    <path d="M 68 36 C 68 36, 74 30, 84 30 L 144 30 C 150 30, 156 34, 158 40 L 166 60 L 140 60 Z" fill="#E2E8F0" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 28 82 L 28 36 C 28 34, 30 32, 34 32 L 142 32 L 142 82 Z" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 142 82 L 142 52 L 158 52 C 162 52, 166 56, 168 62 L 172 74 C 173 78, 171 82, 167 82 Z" fill="#E2E8F0" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="38" y="40" width="40" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="88" y="40" width="34" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 144 54 L 158 54 C 160 54, 162 56, 163 59 L 165 67 L 144 67 Z" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 30 70 Q 70 56, 110 70 T 142 66 L 142 72 Q 100 78, 30 75 Z" fill="#3B82F6" opacity="0.8" />
-                    <circle cx="58" cy="82" r="14" fill="#1E293B" />
-                    <circle cx="58" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
-                    <circle cx="130" cy="82" r="14" fill="#1E293B" />
-                    <circle cx="130" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="bodyGrad4" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#FFFFFF" />
+                        <stop offset="100%" stopColor="#F1F5F9" />
+                      </linearGradient>
+                      <linearGradient id="cabGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#F1F5F9" />
+                        <stop offset="100%" stopColor="#E2E8F0" />
+                      </linearGradient>
+                      <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#EC4899" />
+                        <stop offset="100%" stopColor="#F472B6" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M 76 36 C 76 36, 82 28, 96 28 L 164 28 C 172 28, 180 34, 184 42 L 194 66 L 160 66 Z" fill="url(#cabGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="96" y1="34" x2="164" y2="34" stroke="#CBD5E1" strokeWidth="1.5" />
+                    <path d="M 32 94 L 32 36 C 32 34, 34 32, 38 32 L 164 32 L 164 94 Z" fill="url(#bodyGrad4)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 164 94 L 164 56 L 184 56 C 188 56, 192 60, 194 66 L 199 82 C 201 86, 199 94, 193 94 Z" fill="url(#cabGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="44" y="42" width="56" height="20" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="110" y="42" width="44" height="20" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 168 58 L 184 58 C 187 58, 189 60, 190 63 L 192 72 L 168 72 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="52" y1="45" x2="68" y2="57" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="118" y1="45" x2="130" y2="57" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <path d="M 34 78 Q 80 62, 120 78 T 164 72 L 164 78 Q 120 84, 34 84 Z" fill="url(#waveGrad)" stroke="#1E293B" strokeWidth="1.2" opacity="0.9" />
+                    <circle cx="68" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="68" cy="94" r="12" fill="#E2E8F0" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="68" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="152" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="152" cy="94" r="12" fill="#E2E8F0" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="152" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
                   </svg>
                 )}
               </div>
