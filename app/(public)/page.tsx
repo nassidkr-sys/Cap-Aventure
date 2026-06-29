@@ -335,7 +335,13 @@ export default function HomePage() {
       {/* 3. Catégories Section */}
       <section className="py-24 px-6 max-w-7xl mx-auto w-full space-y-16">
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 lg:gap-16">
-          <div className="lg:w-5/12">
+          <div className="lg:w-5/12 space-y-6">
+            <div className="space-y-3">
+              <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block">
+                Choisissez le bon véhicule
+              </span>
+              <div className="h-1.5 w-16 bg-[#DB2777] rounded-full"></div>
+            </div>
             <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
               Vous recherchez un camping-car ou un fourgon aménagé ?
             </h2>
