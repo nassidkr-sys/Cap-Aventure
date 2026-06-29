@@ -191,6 +191,352 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Cartes Promo & Avis (Yescapa Style) */}
+      <section className="py-16 bg-[#FAFBF9] px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Carte 1 */}
+          <Link 
+            href="/vehicules"
+            className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full group cursor-pointer"
+          >
+            <div className="relative h-56 overflow-hidden bg-brand-hover">
+              <img 
+                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" 
+                alt="Offres exceptionnelles" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <svg 
+                viewBox="0 0 100 12" 
+                preserveAspectRatio="none" 
+                className="absolute bottom-0 left-0 w-full h-8 text-white fill-current translate-y-[1px]"
+              >
+                <path d="M0 12 C 30 0, 70 0, 100 12 Z" />
+              </svg>
+            </div>
+            <div className="p-8 flex-1 flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight group-hover:text-brand-accent transition-colors duration-250">
+                  Des offres exceptionnelles toute l'année
+                </h3>
+                <p className="text-sm text-brand-muted leading-relaxed">
+                  Le camping-car est le meilleur moyen de voyager{' '}
+                  <span className="font-bold bg-[#FEF08A] px-1.5 py-0.5 rounded text-brand-text">
+                    sans se ruiner !
+                  </span>
+                </p>
+              </div>
+              <div className="mt-8">
+                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#FDF2F8] group-hover:bg-[#FCE7F3] text-[#DB2777] rounded-full text-xs font-bold transition-all duration-200">
+                  <span>Toutes les meilleures offres</span>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+                </span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Carte 2 */}
+          <Link 
+            href="/avis"
+            className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full group cursor-pointer"
+          >
+            <div className="relative h-56 overflow-hidden bg-brand-hover">
+              <img 
+                src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80" 
+                alt="Avis Cap Aventure" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <svg 
+                viewBox="0 0 100 12" 
+                preserveAspectRatio="none" 
+                className="absolute bottom-0 left-0 w-full h-8 text-white fill-current translate-y-[1px]"
+              >
+                <path d="M0 12 C 30 0, 70 0, 100 12 Z" />
+              </svg>
+            </div>
+            <div className="p-8 flex-1 flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight group-hover:text-brand-accent transition-colors duration-250">
+                  Avis sur Cap Aventure, une histoire sans fin
+                </h3>
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-[#F59E0B]">
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
+                  </div>
+                  <span className="text-base font-extrabold text-brand-text">4,9/5</span>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-xs font-semibold text-brand-muted">
+                    Voici comment nos utilisateurs évaluent Cap Aventure !
+                  </p>
+                  <p className="text-[10px] text-brand-muted/70">
+                    Note de 4,9 sur 5 basée sur 387 831 avis
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8">
+                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#EFF6FF] group-hover:bg-[#DBEAFE] text-[#2563EB] rounded-full text-xs font-bold transition-all duration-200">
+                  <span>Consulter tous les avis</span>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+                </span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Carte 3 */}
+          <Link 
+            href="/proprietaire"
+            className="bg-brand-accent border border-brand-accent/50 rounded-[2rem] overflow-hidden hover-lift shadow-lg flex flex-col justify-between h-full text-white group cursor-pointer"
+          >
+            <div className="relative h-56 overflow-hidden bg-brand-hover">
+              <img 
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
+                alt="Propriétaire Cap Aventure" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <svg 
+                viewBox="0 0 100 12" 
+                preserveAspectRatio="none" 
+                className="absolute bottom-0 left-0 w-full h-8 text-brand-accent fill-current translate-y-[1px]"
+              >
+                <path d="M0 12 C 30 0, 70 0, 100 12 Z" />
+              </svg>
+            </div>
+            <div className="p-8 flex-1 flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-xl md:text-2xl font-extrabold text-white leading-tight">
+                  Êtes-vous propriétaire ?
+                </h3>
+                <p className="text-sm text-white/90 leading-relaxed">
+                  Louez votre véhicule et tirez-en le meilleur parti en toute confiance.
+                </p>
+              </div>
+              <div className="mt-8">
+                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#DB2777] group-hover:bg-[#C21D5C] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-md">
+                  <span>En savoir plus</span>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+                </span>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      {/* 3. Catégories Section */}
+      <section className="py-24 px-6 max-w-7xl mx-auto w-full space-y-16">
+        <div className="text-center max-w-3xl mx-auto space-y-6">
+          <div className="space-y-3 flex flex-col items-center">
+            <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block text-center">
+              CHOISISSEZ LE BON VÉHICULE
+            </span>
+            <div className="h-1.5 w-16 bg-[#DB2777] rounded-full"></div>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
+            Vous recherchez un camping-car ou un fourgon aménagé ?
+          </h2>
+          <p className="text-sm md:text-base text-brand-muted leading-relaxed max-w-2xl mx-auto">
+            Les meilleurs road trips commencent par les bonnes questions. Pour la location d'un camping-car ou d'un fourgon aménagé, chaque projet de voyage a son véhicule. Nous vous aiderons à choisir celui qui vous convient le mieux, pour que votre voyage commence du bon pied.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {categories.map((cat) => (
+            <div 
+              key={cat.type}
+              className="group flex flex-col bg-white border border-brand-border rounded-[2rem] p-6 justify-between h-full hover-lift shadow-sm transition-all duration-300"
+            >
+              {/* Image / Illustration Container */}
+              <div className="relative h-44 flex items-center justify-center overflow-visible mb-6">
+                {/* Background Decor Card */}
+                <div className={`w-28 h-28 ${cat.bgColor} rounded-[2rem] absolute transition-transform duration-300 group-hover:scale-105`} />
+                
+                {/* Inline SVG Illustrations */}
+                {cat.illustration === 'poptop' && (
+                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="bodyGrad1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#2DD4BF" />
+                        <stop offset="100%" stopColor="#0D9488" />
+                      </linearGradient>
+                      <linearGradient id="windowGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stopColor="#7DD3FC" />
+                        <stop offset="100%" stopColor="#0284C7" />
+                      </linearGradient>
+                      <linearGradient id="roofGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#F8FAFC" />
+                        <stop offset="100%" stopColor="#CBD5E1" />
+                      </linearGradient>
+                      <linearGradient id="canvasGrad" x1="0" y1="1" x2="0" y2="0">
+                        <stop offset="0%" stopColor="#F472B6" />
+                        <stop offset="100%" stopColor="#FCE7F3" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M 52 46 L 148 20 L 140 46 Z" fill="url(#canvasGrad)" stroke="#1E293B" strokeWidth="2" strokeLinejoin="round" />
+                    <line x1="140" y1="22" x2="132" y2="46" stroke="#DB2777" strokeWidth="1.5" opacity="0.6" />
+                    <line x1="96" y1="33" x2="90" y2="46" stroke="#DB2777" strokeWidth="1.5" opacity="0.6" />
+                    <path d="M 48 46 L 154 18 L 152 23 L 50 46 Z" fill="url(#roofGrad)" stroke="#1E293B" strokeWidth="1.5" />
+                    <line x1="50" y1="46" x2="162" y2="46" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
+                    <path d="M 36 94 L 36 50 C 36 48, 38 46, 42 46 L 180 46 C 190 46, 196 52, 198 62 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad1)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 36 76 L 36 94 L 195 94 C 197 94, 198 92, 199 90 L 201 80 L 190 76 Z" fill="#F8FAFC" opacity="0.9" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="198" y="68" width="4" height="12" rx="1" fill="#1E293B" />
+                    <path d="M 197 62 L 202 62 L 201 68 L 196 68 Z" fill="#FDE047" stroke="#1E293B" strokeWidth="1.5" />
+                    <path d="M 186 94 L 204 94 C 206 94, 208 96, 206 98 L 202 102 L 186 102 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 32 94 L 40 94 L 40 102 L 34 102 C 32 102, 31 100, 32 98 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="48" y="52" width="40" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="96" y="52" width="42" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 146 52 L 180 52 C 185 52, 188 56, 189 60 L 191 70 L 146 70 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="56" y1="55" x2="68" y2="67" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="104" y1="55" x2="116" y2="67" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="154" y1="55" x2="166" y2="67" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <path d="M 92 46 L 92 94" stroke="#1E293B" strokeWidth="1.5" opacity="0.5" />
+                    <path d="M 142 46 L 142 94" stroke="#1E293B" strokeWidth="1.5" opacity="0.5" />
+                    <rect x="146" y="74" width="8" height="3" rx="1" fill="#334155" stroke="#1E293B" strokeWidth="1" />
+                    <circle cx="70" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="70" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="70" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="158" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                  </svg>
+                )}
+                {cat.illustration === 'grand' && (
+                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="bodyGrad2" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#475569" />
+                        <stop offset="100%" stopColor="#1E293B" />
+                      </linearGradient>
+                      <linearGradient id="stripeGrad2" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#60A5FA" />
+                        <stop offset="100%" stopColor="#3B82F6" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M 22 60 L 36 60 M 22 74 L 36 74 M 24 54 L 24 80" stroke="#334155" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 18 56 Q 18 50, 24 50 Q 30 50, 30 56 Z" fill="none" stroke="#475569" strokeWidth="1.5" />
+                    <circle cx="24" cy="60" r="4" stroke="#1E293B" strokeWidth="1.5" fill="#E2E8F0" />
+                    <circle cx="24" cy="74" r="4" stroke="#1E293B" strokeWidth="1.5" fill="#E2E8F0" />
+                    <path d="M 36 94 L 36 44 C 36 42, 38 40, 42 40 L 182 40 C 190 40, 196 46, 198 56 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad2)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 42 40 C 42 34, 48 30, 56 30 L 168 30 C 174 30, 178 34, 178 40 Z" fill="url(#bodyGrad2)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="56" y1="36" x2="164" y2="36" stroke="#334155" strokeWidth="1.5" />
+                    <path d="M 36 78 Q 80 66, 120 78 T 198 72 L 199 78 Q 140 84, 36 84 Z" fill="url(#stripeGrad2)" stroke="#1E293B" strokeWidth="1.5" opacity="0.85" />
+                    <path d="M 197 62 L 202 62 L 201 68 L 196 68 Z" fill="#FDE047" stroke="#1E293B" strokeWidth="1.5" />
+                    <path d="M 186 94 L 204 94 C 206 94, 208 96, 206 98 L 202 102 L 186 102 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 32 94 L 40 94 L 40 102 L 34 102 C 32 102, 31 100, 32 98 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="48" y="46" width="54" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="110" y="46" width="38" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 156 46 L 182 46 C 187 46, 190 50, 191 54 L 193 64 L 156 64 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="56" y1="49" x2="72" y2="61" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="116" y1="49" x2="128" y2="61" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="162" y1="49" x2="174" y2="61" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <circle cx="70" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="70" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="70" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="158" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                  </svg>
+                )}
+                {cat.illustration === 'discreet' && (
+                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="bodyGrad3" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#FFFFFF" />
+                        <stop offset="100%" stopColor="#E2E8F0" />
+                      </linearGradient>
+                      <linearGradient id="stripeGrad3" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#FCD34D" />
+                        <stop offset="100%" stopColor="#F59E0B" />
+                      </linearGradient>
+                    </defs>
+                    <rect x="74" y="27" width="28" height="6" rx="2" fill="#94A3B8" stroke="#1E293B" strokeWidth="1.5" />
+                    <rect x="112" y="29" width="34" height="4" rx="1" fill="#475569" stroke="#1E293B" strokeWidth="1.5" />
+                    <path d="M 36 94 L 36 40 C 36 38, 38 36, 42 36 L 180 36 C 188 36, 194 41, 196 50 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad3)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 42 36 L 176 36 L 174 32 C 174 32, 172 30, 166 30 L 52 30 C 46 30, 42 32, 42 32 Z" fill="url(#bodyGrad3)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 36 78 Q 70 70, 110 82 T 184 76 L 184 80 Q 140 86, 36 84 Z" fill="url(#stripeGrad3)" opacity="0.8" stroke="#1E293B" strokeWidth="1" />
+                    <path d="M 197 62 L 202 62 L 201 68 L 196 68 Z" fill="#FDE047" stroke="#1E293B" strokeWidth="1.5" />
+                    <path d="M 36 84 L 52 84 C 58 84, 62 82, 64 78 L 74 78 C 76 82, 80 84, 86 84 L 142 84 C 148 84, 152 82, 154 78 L 164 78 C 166 82, 170 84, 176 84 L 196 84 C 198 84, 200 86, 201 88 L 202 94 L 36 94 Z" fill="#334155" opacity="0.2" />
+                    <path d="M 186 94 L 204 94 C 206 94, 208 96, 206 98 L 202 102 L 186 102 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 32 94 L 40 94 L 40 102 L 34 102 C 32 102, 31 100, 32 98 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="48" y="44" width="46" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="102" y="44" width="42" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 152 44 L 180 44 C 184 44, 187 48, 188 52 L 190 62 L 152 62 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="56" y1="47" x2="72" y2="59" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="110" y1="47" x2="122" y2="59" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <circle cx="70" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="70" cy="94" r="12" fill="#475569" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="70" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="158" cy="94" r="12" fill="#475569" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="158" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                  </svg>
+                )}
+                {cat.illustration === 'profile' && (
+                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="bodyGrad4" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#FFFFFF" />
+                        <stop offset="100%" stopColor="#F1F5F9" />
+                      </linearGradient>
+                      <linearGradient id="cabGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#F1F5F9" />
+                        <stop offset="100%" stopColor="#E2E8F0" />
+                      </linearGradient>
+                      <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#EC4899" />
+                        <stop offset="100%" stopColor="#F472B6" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M 76 36 C 76 36, 82 28, 96 28 L 164 28 C 172 28, 180 34, 184 42 L 194 66 L 160 66 Z" fill="url(#cabGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="96" y1="34" x2="164" y2="34" stroke="#CBD5E1" strokeWidth="1.5" />
+                    <path d="M 32 94 L 32 36 C 32 34, 34 32, 38 32 L 164 32 L 164 94 Z" fill="url(#bodyGrad4)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 164 94 L 164 56 L 184 56 C 188 56, 192 60, 194 66 L 199 82 C 201 86, 199 94, 193 94 Z" fill="url(#cabGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="44" y="42" width="56" height="20" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="110" y="42" width="44" height="20" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 168 58 L 184 58 C 187 58, 189 60, 190 63 L 192 72 L 168 72 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="52" y1="45" x2="68" y2="57" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <line x1="118" y1="45" x2="130" y2="57" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
+                    <path d="M 34 78 Q 80 62, 120 78 T 164 72 L 164 78 Q 120 84, 34 84 Z" fill="url(#waveGrad)" stroke="#1E293B" strokeWidth="1.2" opacity="0.9" />
+                    <circle cx="68" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="68" cy="94" r="12" fill="#E2E8F0" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="68" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="152" cy="94" r="18" fill="#1E293B" />
+                    <circle cx="152" cy="94" r="12" fill="#E2E8F0" stroke="#1E293B" strokeWidth="1.5" />
+                    <circle cx="152" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
+                  </svg>
+                )}
+              </div>
+
+              {/* Text Area */}
+              <div className="flex-1 flex flex-col justify-between space-y-4">
+                <div className="space-y-2 text-center sm:text-left">
+                  <h3 className="font-extrabold text-brand-text text-lg group-hover:text-brand-accent transition-colors duration-200">
+                    {cat.name}
+                  </h3>
+                  <p className="text-xs text-brand-accent font-bold tracking-wide uppercase">
+                    {cat.subtitle}
+                  </p>
+                  <p className="text-xs text-brand-muted leading-relaxed">
+                    {cat.desc}
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-brand-border flex items-center justify-between">
+                  <Link 
+                    href={`/vehicules?type=${cat.type}`}
+                    className="text-xs font-extrabold text-[#DB2777] hover:text-[#BE185D] hover:underline transition-colors duration-200"
+                  >
+                    {cat.cta}
+                  </Link>
+                  <ArrowRight className="w-3.5 h-3.5 text-[#DB2777] transition-transform duration-200 group-hover:translate-x-1" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* 2. Destinations Section (France & Belgique) */}
       <section className="py-24 bg-white border-b border-brand-border px-6">
         <div className="max-w-7xl mx-auto space-y-16">
@@ -407,350 +753,6 @@ export default function HomePage() {
             })}
           </div>
 
-        </div>
-      </section>
-
-      {/* Cartes Promo & Avis (Yescapa Style) */}
-      <section className="py-16 bg-[#FAFBF9] px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Carte 1 */}
-          <Link 
-            href="/vehicules"
-            className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full group cursor-pointer"
-          >
-            <div className="relative h-56 overflow-hidden bg-brand-hover">
-              <img 
-                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" 
-                alt="Offres exceptionnelles" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <svg 
-                viewBox="0 0 100 12" 
-                preserveAspectRatio="none" 
-                className="absolute bottom-0 left-0 w-full h-8 text-white fill-current translate-y-[1px]"
-              >
-                <path d="M0 12 C 30 0, 70 0, 100 12 Z" />
-              </svg>
-            </div>
-            <div className="p-8 flex-1 flex flex-col justify-between">
-              <div className="space-y-4">
-                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight group-hover:text-brand-accent transition-colors duration-250">
-                  Des offres exceptionnelles toute l'année
-                </h3>
-                <p className="text-sm text-brand-muted leading-relaxed">
-                  Le camping-car est le meilleur moyen de voyager{' '}
-                  <span className="font-bold bg-[#FEF08A] px-1.5 py-0.5 rounded text-brand-text">
-                    sans se ruiner !
-                  </span>
-                </p>
-              </div>
-              <div className="mt-8">
-                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#FDF2F8] group-hover:bg-[#FCE7F3] text-[#DB2777] rounded-full text-xs font-bold transition-all duration-200">
-                  <span>Toutes les meilleures offres</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </span>
-              </div>
-            </div>
-          </Link>
-
-          {/* Carte 2 */}
-          <Link 
-            href="/avis"
-            className="bg-white border border-brand-border rounded-[2rem] overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full group cursor-pointer"
-          >
-            <div className="relative h-56 overflow-hidden bg-brand-hover">
-              <img 
-                src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80" 
-                alt="Avis Cap Aventure" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <svg 
-                viewBox="0 0 100 12" 
-                preserveAspectRatio="none" 
-                className="absolute bottom-0 left-0 w-full h-8 text-white fill-current translate-y-[1px]"
-              >
-                <path d="M0 12 C 30 0, 70 0, 100 12 Z" />
-              </svg>
-            </div>
-            <div className="p-8 flex-1 flex flex-col justify-between">
-              <div className="space-y-4">
-                <h3 className="text-xl md:text-2xl font-extrabold text-brand-text leading-tight group-hover:text-brand-accent transition-colors duration-250">
-                  Avis sur Cap Aventure, une histoire sans fin
-                </h3>
-                <div className="flex items-center space-x-2">
-                  <div className="flex text-[#F59E0B]">
-                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
-                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
-                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
-                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
-                    <Star className="w-4 h-4 fill-current text-[#F59E0B]" />
-                  </div>
-                  <span className="text-base font-extrabold text-brand-text">4,9/5</span>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-xs font-semibold text-brand-muted">
-                    Voici comment nos utilisateurs évaluent Cap Aventure !
-                  </p>
-                  <p className="text-[10px] text-brand-muted/70">
-                    Note de 4,9 sur 5 basée sur 387 831 avis
-                  </p>
-                </div>
-              </div>
-              <div className="mt-8">
-                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#EFF6FF] group-hover:bg-[#DBEAFE] text-[#2563EB] rounded-full text-xs font-bold transition-all duration-200">
-                  <span>Consulter tous les avis</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </span>
-              </div>
-            </div>
-          </Link>
-
-          {/* Carte 3 */}
-          <Link 
-            href="/proprietaire"
-            className="bg-brand-accent border border-brand-accent/50 rounded-[2rem] overflow-hidden hover-lift shadow-lg flex flex-col justify-between h-full text-white group cursor-pointer"
-          >
-            <div className="relative h-56 overflow-hidden bg-brand-hover">
-              <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
-                alt="Propriétaire Cap Aventure" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <svg 
-                viewBox="0 0 100 12" 
-                preserveAspectRatio="none" 
-                className="absolute bottom-0 left-0 w-full h-8 text-brand-accent fill-current translate-y-[1px]"
-              >
-                <path d="M0 12 C 30 0, 70 0, 100 12 Z" />
-              </svg>
-            </div>
-            <div className="p-8 flex-1 flex flex-col justify-between">
-              <div className="space-y-4">
-                <h3 className="text-xl md:text-2xl font-extrabold text-white leading-tight">
-                  Êtes-vous propriétaire ?
-                </h3>
-                <p className="text-sm text-white/90 leading-relaxed">
-                  Louez votre véhicule et tirez-en le meilleur parti en toute confiance.
-                </p>
-              </div>
-              <div className="mt-8">
-                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#DB2777] group-hover:bg-[#C21D5C] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-md">
-                  <span>En savoir plus</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </span>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      {/* 3. Catégories Section */}
-      <section className="py-24 px-6 max-w-7xl mx-auto w-full space-y-16">
-        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 lg:gap-16">
-          <div className="lg:w-5/12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
-              Vous recherchez un camping-car ou un fourgon aménagé ?
-            </h2>
-          </div>
-          <div className="lg:w-6/12">
-            <p className="text-sm md:text-base text-brand-muted leading-relaxed">
-              Les meilleurs road trips commencent par les bonnes questions. Pour la location d'un camping-car ou d'un fourgon aménagé, chaque projet de voyage a son véhicule. Nous vous aiderons à choisir celui qui vous convient le mieux, pour que votre voyage commence du bon pied.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {categories.map((cat) => (
-            <div 
-              key={cat.type}
-              className="group flex flex-col bg-white border border-brand-border rounded-[2rem] p-6 justify-between h-full hover-lift shadow-sm transition-all duration-300"
-            >
-              {/* Image / Illustration Container */}
-              <div className="relative h-44 flex items-center justify-center overflow-visible mb-6">
-                {/* Background Decor Card */}
-                <div className={`w-28 h-28 ${cat.bgColor} rounded-[2rem] absolute transition-transform duration-300 group-hover:scale-105`} />
-                
-                {/* Inline SVG Illustrations */}
-                {cat.illustration === 'poptop' && (
-                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
-                    <defs>
-                      <linearGradient id="bodyGrad1" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#2DD4BF" />
-                        <stop offset="100%" stopColor="#0D9488" />
-                      </linearGradient>
-                      <linearGradient id="windowGrad" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stopColor="#7DD3FC" />
-                        <stop offset="100%" stopColor="#0284C7" />
-                      </linearGradient>
-                      <linearGradient id="roofGrad" x1="0" y1="0" x2="1" y2="0">
-                        <stop offset="0%" stopColor="#F8FAFC" />
-                        <stop offset="100%" stopColor="#CBD5E1" />
-                      </linearGradient>
-                      <linearGradient id="canvasGrad" x1="0" y1="1" x2="0" y2="0">
-                        <stop offset="0%" stopColor="#F472B6" />
-                        <stop offset="100%" stopColor="#FCE7F3" />
-                      </linearGradient>
-                    </defs>
-                    <path d="M 52 46 L 148 20 L 140 46 Z" fill="url(#canvasGrad)" stroke="#1E293B" strokeWidth="2" strokeLinejoin="round" />
-                    <line x1="140" y1="22" x2="132" y2="46" stroke="#DB2777" strokeWidth="1.5" opacity="0.6" />
-                    <line x1="96" y1="33" x2="90" y2="46" stroke="#DB2777" strokeWidth="1.5" opacity="0.6" />
-                    <path d="M 48 46 L 154 18 L 152 23 L 50 46 Z" fill="url(#roofGrad)" stroke="#1E293B" strokeWidth="1.5" />
-                    <line x1="50" y1="46" x2="162" y2="46" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
-                    <path d="M 36 94 L 36 50 C 36 48, 38 46, 42 46 L 180 46 C 190 46, 196 52, 198 62 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad1)" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 36 76 L 36 94 L 195 94 C 197 94, 198 92, 199 90 L 201 80 L 190 76 Z" fill="#F8FAFC" opacity="0.9" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="198" y="68" width="4" height="12" rx="1" fill="#1E293B" />
-                    <path d="M 197 62 L 202 62 L 201 68 L 196 68 Z" fill="#FDE047" stroke="#1E293B" strokeWidth="1.5" />
-                    <path d="M 186 94 L 204 94 C 206 94, 208 96, 206 98 L 202 102 L 186 102 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 32 94 L 40 94 L 40 102 L 34 102 C 32 102, 31 100, 32 98 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="48" y="52" width="40" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="96" y="52" width="42" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 146 52 L 180 52 C 185 52, 188 56, 189 60 L 191 70 L 146 70 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <line x1="56" y1="55" x2="68" y2="67" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <line x1="104" y1="55" x2="116" y2="67" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <line x1="154" y1="55" x2="166" y2="67" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <path d="M 92 46 L 92 94" stroke="#1E293B" strokeWidth="1.5" opacity="0.5" />
-                    <path d="M 142 46 L 142 94" stroke="#1E293B" strokeWidth="1.5" opacity="0.5" />
-                    <rect x="146" y="74" width="8" height="3" rx="1" fill="#334155" stroke="#1E293B" strokeWidth="1" />
-                    <circle cx="70" cy="94" r="18" fill="#1E293B" />
-                    <circle cx="70" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="70" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="158" cy="94" r="18" fill="#1E293B" />
-                    <circle cx="158" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="158" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
-                  </svg>
-                )}
-                {cat.illustration === 'grand' && (
-                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
-                    <defs>
-                      <linearGradient id="bodyGrad2" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#475569" />
-                        <stop offset="100%" stopColor="#1E293B" />
-                      </linearGradient>
-                      <linearGradient id="stripeGrad2" x1="0" y1="0" x2="1" y2="0">
-                        <stop offset="0%" stopColor="#60A5FA" />
-                        <stop offset="100%" stopColor="#3B82F6" />
-                      </linearGradient>
-                    </defs>
-                    <path d="M 22 60 L 36 60 M 22 74 L 36 74 M 24 54 L 24 80" stroke="#334155" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M 18 56 Q 18 50, 24 50 Q 30 50, 30 56 Z" fill="none" stroke="#475569" strokeWidth="1.5" />
-                    <circle cx="24" cy="60" r="4" stroke="#1E293B" strokeWidth="1.5" fill="#E2E8F0" />
-                    <circle cx="24" cy="74" r="4" stroke="#1E293B" strokeWidth="1.5" fill="#E2E8F0" />
-                    <path d="M 36 94 L 36 44 C 36 42, 38 40, 42 40 L 182 40 C 190 40, 196 46, 198 56 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad2)" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 42 40 C 42 34, 48 30, 56 30 L 168 30 C 174 30, 178 34, 178 40 Z" fill="url(#bodyGrad2)" stroke="#1E293B" strokeWidth="2" />
-                    <line x1="56" y1="36" x2="164" y2="36" stroke="#334155" strokeWidth="1.5" />
-                    <path d="M 36 78 Q 80 66, 120 78 T 198 72 L 199 78 Q 140 84, 36 84 Z" fill="url(#stripeGrad2)" stroke="#1E293B" strokeWidth="1.5" opacity="0.85" />
-                    <path d="M 197 62 L 202 62 L 201 68 L 196 68 Z" fill="#FDE047" stroke="#1E293B" strokeWidth="1.5" />
-                    <path d="M 186 94 L 204 94 C 206 94, 208 96, 206 98 L 202 102 L 186 102 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 32 94 L 40 94 L 40 102 L 34 102 C 32 102, 31 100, 32 98 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="48" y="46" width="54" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="110" y="46" width="38" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 156 46 L 182 46 C 187 46, 190 50, 191 54 L 193 64 L 156 64 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <line x1="56" y1="49" x2="72" y2="61" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <line x1="116" y1="49" x2="128" y2="61" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <line x1="162" y1="49" x2="174" y2="61" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <circle cx="70" cy="94" r="18" fill="#1E293B" />
-                    <circle cx="70" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="70" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="158" cy="94" r="18" fill="#1E293B" />
-                    <circle cx="158" cy="94" r="12" fill="#64748B" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="158" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
-                  </svg>
-                )}
-                {cat.illustration === 'discreet' && (
-                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
-                    <defs>
-                      <linearGradient id="bodyGrad3" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#FFFFFF" />
-                        <stop offset="100%" stopColor="#E2E8F0" />
-                      </linearGradient>
-                      <linearGradient id="stripeGrad3" x1="0" y1="0" x2="1" y2="0">
-                        <stop offset="0%" stopColor="#FCD34D" />
-                        <stop offset="100%" stopColor="#F59E0B" />
-                      </linearGradient>
-                    </defs>
-                    <rect x="74" y="27" width="28" height="6" rx="2" fill="#94A3B8" stroke="#1E293B" strokeWidth="1.5" />
-                    <rect x="112" y="29" width="34" height="4" rx="1" fill="#475569" stroke="#1E293B" strokeWidth="1.5" />
-                    <path d="M 36 94 L 36 40 C 36 38, 38 36, 42 36 L 180 36 C 188 36, 194 41, 196 50 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad3)" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 42 36 L 176 36 L 174 32 C 174 32, 172 30, 166 30 L 52 30 C 46 30, 42 32, 42 32 Z" fill="url(#bodyGrad3)" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 36 78 Q 70 70, 110 82 T 184 76 L 184 80 Q 140 86, 36 84 Z" fill="url(#stripeGrad3)" opacity="0.8" stroke="#1E293B" strokeWidth="1" />
-                    <path d="M 197 62 L 202 62 L 201 68 L 196 68 Z" fill="#FDE047" stroke="#1E293B" strokeWidth="1.5" />
-                    <path d="M 36 84 L 52 84 C 58 84, 62 82, 64 78 L 74 78 C 76 82, 80 84, 86 84 L 142 84 C 148 84, 152 82, 154 78 L 164 78 C 166 82, 170 84, 176 84 L 196 84 C 198 84, 200 86, 201 88 L 202 94 L 36 94 Z" fill="#334155" opacity="0.2" />
-                    <path d="M 186 94 L 204 94 C 206 94, 208 96, 206 98 L 202 102 L 186 102 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 32 94 L 40 94 L 40 102 L 34 102 C 32 102, 31 100, 32 98 Z" fill="#334155" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="48" y="44" width="46" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="102" y="44" width="42" height="18" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 152 44 L 180 44 C 184 44, 187 48, 188 52 L 190 62 L 152 62 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <line x1="56" y1="47" x2="72" y2="59" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <line x1="110" y1="47" x2="122" y2="59" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <circle cx="70" cy="94" r="18" fill="#1E293B" />
-                    <circle cx="70" cy="94" r="12" fill="#475569" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="70" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="158" cy="94" r="18" fill="#1E293B" />
-                    <circle cx="158" cy="94" r="12" fill="#475569" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="158" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
-                  </svg>
-                )}
-                {cat.illustration === 'profile' && (
-                  <svg viewBox="0 0 240 140" className="w-52 h-32 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:scale-105">
-                    <defs>
-                      <linearGradient id="bodyGrad4" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#FFFFFF" />
-                        <stop offset="100%" stopColor="#F1F5F9" />
-                      </linearGradient>
-                      <linearGradient id="cabGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#F1F5F9" />
-                        <stop offset="100%" stopColor="#E2E8F0" />
-                      </linearGradient>
-                      <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
-                        <stop offset="0%" stopColor="#EC4899" />
-                        <stop offset="100%" stopColor="#F472B6" />
-                      </linearGradient>
-                    </defs>
-                    <path d="M 76 36 C 76 36, 82 28, 96 28 L 164 28 C 172 28, 180 34, 184 42 L 194 66 L 160 66 Z" fill="url(#cabGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <line x1="96" y1="34" x2="164" y2="34" stroke="#CBD5E1" strokeWidth="1.5" />
-                    <path d="M 32 94 L 32 36 C 32 34, 34 32, 38 32 L 164 32 L 164 94 Z" fill="url(#bodyGrad4)" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 164 94 L 164 56 L 184 56 C 188 56, 192 60, 194 66 L 199 82 C 201 86, 199 94, 193 94 Z" fill="url(#cabGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="44" y="42" width="56" height="20" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <rect x="110" y="42" width="44" height="20" rx="4" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <path d="M 168 58 L 184 58 C 187 58, 189 60, 190 63 L 192 72 L 168 72 Z" fill="url(#windowGrad)" stroke="#1E293B" strokeWidth="2" />
-                    <line x1="52" y1="45" x2="68" y2="57" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <line x1="118" y1="45" x2="130" y2="57" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.4" />
-                    <path d="M 34 78 Q 80 62, 120 78 T 164 72 L 164 78 Q 120 84, 34 84 Z" fill="url(#waveGrad)" stroke="#1E293B" strokeWidth="1.2" opacity="0.9" />
-                    <circle cx="68" cy="94" r="18" fill="#1E293B" />
-                    <circle cx="68" cy="94" r="12" fill="#E2E8F0" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="68" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="152" cy="94" r="18" fill="#1E293B" />
-                    <circle cx="152" cy="94" r="12" fill="#E2E8F0" stroke="#1E293B" strokeWidth="1.5" />
-                    <circle cx="152" cy="94" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="1.5" />
-                  </svg>
-                )}
-              </div>
-
-              {/* Text Area */}
-              <div className="flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-2 text-center sm:text-left">
-                  <h3 className="font-extrabold text-brand-text text-lg group-hover:text-brand-accent transition-colors duration-200">
-                    {cat.name}
-                  </h3>
-                  <p className="text-xs text-brand-accent font-bold tracking-wide uppercase">
-                    {cat.subtitle}
-                  </p>
-                  <p className="text-xs text-brand-muted leading-relaxed">
-                    {cat.desc}
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-brand-border flex items-center justify-between">
-                  <Link 
-                    href={`/vehicules?type=${cat.type}`}
-                    className="text-xs font-extrabold text-[#DB2777] hover:text-[#BE185D] hover:underline transition-colors duration-200"
-                  >
-                    {cat.cta}
-                  </Link>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#DB2777] transition-transform duration-200 group-hover:translate-x-1" />
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
