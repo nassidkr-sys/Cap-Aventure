@@ -98,10 +98,10 @@ export default function CustomSelect({
         aria-expanded={open}
         className={`
           relative w-full flex items-center justify-between
-          px-4 py-3 bg-white rounded-2xl text-sm font-medium
+          px-5 py-3.5 bg-white rounded-2xl text-xs font-semibold
           border-2 transition-all duration-200 cursor-pointer text-left
           ${open
-            ? 'border-brand-accent ring-4 ring-brand-accent/10 shadow-md'
+            ? 'border-brand-accent ring-4 ring-brand-accent/10 shadow-md bg-white'
             : 'border-brand-border hover:border-brand-accent/40 shadow-sm hover:shadow-md'
           }
           ${disabled ? 'opacity-50 cursor-not-allowed bg-brand-beige' : ''}
@@ -111,10 +111,10 @@ export default function CustomSelect({
         {label && (
           <span
             className={`
-              absolute left-4 font-semibold transition-all duration-200 pointer-events-none
+              absolute left-5 font-extrabold transition-all duration-200 pointer-events-none
               ${(open || selected)
-                ? 'top-1.5 text-[9px] uppercase tracking-widest text-brand-accent'
-                : 'top-1/2 -translate-y-1/2 text-sm text-brand-muted'
+                ? 'top-1.5 text-[9px] uppercase tracking-widest text-[#DB2777]'
+                : 'top-1/2 -translate-y-1/2 text-xs text-brand-muted font-bold'
               }
             `}
           >
@@ -123,11 +123,11 @@ export default function CustomSelect({
         )}
 
         {/* Selected value display */}
-        <div className={`flex items-center gap-2.5 min-w-0 flex-1 ${label && (open || selected) ? 'mt-3' : ''}`}>
+        <div className={`flex items-center gap-2.5 min-w-0 flex-1 ${label && (open || selected) ? 'mt-3.5' : ''}`}>
           {selected?.icon && (
-            <span className="flex-shrink-0 text-base leading-none">{selected.icon}</span>
+            <span className="flex-shrink-0 text-sm leading-none">{selected.icon}</span>
           )}
-          <span className={`truncate ${selected ? 'text-brand-text font-semibold' : 'text-brand-muted'}`}>
+          <span className={`truncate ${selected ? 'text-brand-text font-extrabold' : 'text-brand-muted font-bold'}`}>
             {selected ? selected.label : (!label ? placeholder : '')}
           </span>
         </div>
@@ -146,33 +146,33 @@ export default function CustomSelect({
           role="listbox"
           className="
             absolute z-50 top-full mt-2 left-0 right-0
-            bg-white border border-brand-border/70
-            rounded-2xl shadow-2xl shadow-black/10
+            bg-white/95 backdrop-blur-md border border-brand-border/60
+            rounded-2xl shadow-xl shadow-black/5
             overflow-hidden animate-scale-up
           "
           style={{ transformOrigin: 'top center' }}
         >
           {/* Search input */}
           {searchable && (
-            <div className="px-3 pt-3 pb-2 border-b border-brand-border/50">
+            <div className="px-3 pt-3 pb-2 border-b border-brand-border/40">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-brand-muted" />
+                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-muted" />
                 <input
                   ref={searchRef}
                   type="text"
                   value={search}
                   onChange={e => setSearch(e.target.value)}
                   placeholder="Rechercher..."
-                  className="w-full pl-8 pr-3 py-2 text-sm bg-brand-beige border border-brand-border rounded-xl focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition-all"
+                  className="w-full pl-9 pr-3.5 py-2.5 text-xs bg-brand-beige border border-brand-border rounded-xl focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition-all"
                 />
               </div>
             </div>
           )}
 
           {/* Options list */}
-          <ul className="py-1.5 max-h-56 overflow-y-auto">
+          <ul className="py-2 max-h-60 overflow-y-auto">
             {filtered.length === 0 ? (
-              <li className="px-4 py-3 text-sm text-brand-muted text-center italic">
+              <li className="px-5 py-3 text-xs text-brand-muted text-center italic">
                 Aucun résultat
               </li>
             ) : (
@@ -186,29 +186,32 @@ export default function CustomSelect({
                     onClick={() => handleSelect(option.value)}
                     className={`
                       flex items-center justify-between gap-3
-                      px-4 py-2.5 cursor-pointer text-sm font-medium
+                      px-4 py-3 cursor-pointer text-xs font-semibold
                       transition-all duration-150 mx-1.5 rounded-xl
                       ${isSelected
-                        ? 'bg-brand-accent/8 text-brand-accent'
+                        ? 'bg-brand-accent/10 text-brand-accent font-bold'
                         : 'text-brand-text hover:bg-brand-hover'
                       }
                     `}
                   >
-                    <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="flex items-center gap-3 min-w-0">
                       {option.icon && (
                         <span className="flex-shrink-0 text-base leading-none">{option.icon}</span>
                       )}
-                      <span className="truncate">
-                        {searchable && search ? (
-                          // Highlight matching text
-                          <HighlightMatch text={option.label} query={search} />
-                        ) : (
-                          option.label
+                      <div className="flex flex-col text-left">
+                        <span className="truncate">
+                          {searchable && search ? (
+                            <HighlightMatch text={option.label} query={search} />
+                          ) : (
+                            option.label
+                          )}
+                        </span>
+                        {option.description && (
+                          <span className="text-[10px] text-brand-muted font-normal mt-0.5 leading-none">
+                            {option.description}
+                          </span>
                         )}
-                      </span>
-                      {option.description && (
-                        <span className="text-brand-muted text-xs font-normal truncate">{option.description}</span>
-                      )}
+                      </div>
                     </div>
                     {isSelected && (
                       <Check className="flex-shrink-0 w-4 h-4 text-brand-accent" strokeWidth={2.5} />

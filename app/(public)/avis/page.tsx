@@ -191,6 +191,24 @@ export default function AvisPage() {
       {/* Background grain noise visual overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] grain-bg"></div>
 
+      {/* Sub-navigation Tabs */}
+      <div className="bg-white border-b border-brand-border">
+        <div className="max-w-6xl mx-auto px-6 flex justify-center md:justify-start space-x-8">
+          <Link 
+            href="/avis"
+            className="py-4 text-xs font-bold transition-all border-b-2 border-[#DB2777] text-brand-text"
+          >
+            Avis de la communauté
+          </Link>
+          <Link 
+            href="/communaute/photos"
+            className="py-4 text-xs font-bold transition-all text-brand-muted hover:text-brand-text"
+          >
+            Photos de la communauté
+          </Link>
+        </div>
+      </div>
+
       {/* Hero & Banner */}
       <section className="relative bg-brand-text text-white py-16 px-6 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl"></div>
