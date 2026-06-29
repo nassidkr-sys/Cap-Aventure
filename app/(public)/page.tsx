@@ -226,7 +226,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="mt-8">
-                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#FDF2F8] group-hover:bg-[#FCE7F3] text-[#DB2777] rounded-full text-xs font-bold transition-all duration-200">
+                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#FEF9EC] group-hover:bg-[#FEF3CD] text-[#C9A035] rounded-full text-xs font-bold transition-all duration-200">
                   <span>Toutes les meilleures offres</span>
                   <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
                 </span>
@@ -315,7 +315,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="mt-8">
-                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#DB2777] group-hover:bg-[#C21D5C] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-md">
+                <span className="inline-flex items-center space-x-1 px-6 py-3 bg-[#C9A035] group-hover:bg-[#A8832A] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-md">
                   <span>En savoir plus</span>
                   <ArrowRight className="w-3.5 h-3.5 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
                 </span>
@@ -329,10 +329,10 @@ export default function HomePage() {
       <section className="py-24 px-6 max-w-7xl mx-auto w-full space-y-16">
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <div className="space-y-3 flex flex-col items-center">
-            <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block text-center">
+            <span className="text-[#C9A035] font-extrabold text-xs uppercase tracking-widest block text-center">
               CHOISISSEZ LE BON VÉHICULE
             </span>
-            <div className="h-1.5 w-16 bg-[#DB2777] rounded-full"></div>
+            <div className="h-1.5 w-16 bg-[#C9A035] rounded-full"></div>
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
             Vous recherchez un camping-car ou un fourgon aménagé ?
@@ -371,12 +371,12 @@ export default function HomePage() {
                       </linearGradient>
                       <linearGradient id="canvasGrad" x1="0" y1="1" x2="0" y2="0">
                         <stop offset="0%" stopColor="#F472B6" />
-                        <stop offset="100%" stopColor="#FCE7F3" />
+                        <stop offset="100%" stopColor="#FEF3CD" />
                       </linearGradient>
                     </defs>
                     <path d="M 52 46 L 148 20 L 140 46 Z" fill="url(#canvasGrad)" stroke="#1E293B" strokeWidth="2" strokeLinejoin="round" />
-                    <line x1="140" y1="22" x2="132" y2="46" stroke="#DB2777" strokeWidth="1.5" opacity="0.6" />
-                    <line x1="96" y1="33" x2="90" y2="46" stroke="#DB2777" strokeWidth="1.5" opacity="0.6" />
+                    <line x1="140" y1="22" x2="132" y2="46" stroke="#C9A035" strokeWidth="1.5" opacity="0.6" />
+                    <line x1="96" y1="33" x2="90" y2="46" stroke="#C9A035" strokeWidth="1.5" opacity="0.6" />
                     <path d="M 48 46 L 154 18 L 152 23 L 50 46 Z" fill="url(#roofGrad)" stroke="#1E293B" strokeWidth="1.5" />
                     <line x1="50" y1="46" x2="162" y2="46" stroke="#1E293B" strokeWidth="4" strokeLinecap="round" />
                     <path d="M 36 94 L 36 50 C 36 48, 38 46, 42 46 L 180 46 C 190 46, 196 52, 198 62 L 202 84 C 203 88, 201 94, 195 94 Z" fill="url(#bodyGrad1)" stroke="#1E293B" strokeWidth="2" />
@@ -525,11 +525,11 @@ export default function HomePage() {
                 <div className="pt-4 border-t border-brand-border flex items-center justify-between">
                   <Link 
                     href={`/vehicules?type=${cat.type}`}
-                    className="text-xs font-extrabold text-[#DB2777] hover:text-[#BE185D] hover:underline transition-colors duration-200"
+                    className="text-xs font-extrabold text-[#C9A035] hover:text-[#A8832A] hover:underline transition-colors duration-200"
                   >
                     {cat.cta}
                   </Link>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#DB2777] transition-transform duration-200 group-hover:translate-x-1" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#C9A035] transition-transform duration-200 group-hover:translate-x-1" />
                 </div>
               </div>
             </div>
@@ -544,10 +544,10 @@ export default function HomePage() {
           {/* Header */}
           <div className="space-y-4 max-w-3xl">
             <div className="space-y-2">
-              <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block">
+              <span className="text-[#C9A035] font-extrabold text-xs uppercase tracking-widest block">
                 Nos destinations
               </span>
-              <div className="h-1 w-12 bg-[#DB2777] rounded-full"></div>
+              <div className="h-1 w-12 bg-[#C9A035] rounded-full"></div>
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-brand-text tracking-tight">
               En camping-car, tout est possible
@@ -614,7 +614,7 @@ export default function HomePage() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-              <span className="absolute top-4 right-4 bg-[#DB2777] text-white px-2.5 py-0.5 rounded-full text-[9px] font-extrabold uppercase tracking-wide">Nouveau</span>
+              <span className="absolute top-4 right-4 bg-[#C9A035] text-white px-2.5 py-0.5 rounded-full text-[9px] font-extrabold uppercase tracking-wide">Nouveau</span>
               <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
                 <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
                   🇧🇪
@@ -1011,10 +1011,10 @@ export default function HomePage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="space-y-2">
-                <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block">
+                <span className="text-[#C9A035] font-extrabold text-xs uppercase tracking-widest block">
                   Rencontrez la communauté
                 </span>
-                <div className="h-1 w-12 bg-[#DB2777] rounded-full"></div>
+                <div className="h-1 w-12 bg-[#C9A035] rounded-full"></div>
               </div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-brand-text tracking-tight leading-tight">
                 Avis sur Cap Aventure, une histoire sans fin
@@ -1043,7 +1043,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 href="/avis"
-                className="px-6 py-3.5 bg-[#FCE7F3] hover:bg-[#FBCFE8] text-[#DB2777] rounded-full text-xs font-bold transition-all duration-200 text-center cursor-pointer"
+                className="px-6 py-3.5 bg-[#FEF3CD] hover:bg-[#EDD9A3] text-[#C9A035] rounded-full text-xs font-bold transition-all duration-200 text-center cursor-pointer"
               >
                 Lire les avis sur Cap Aventure
               </Link>
@@ -1142,7 +1142,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link 
                 href="/proprietaire"
-                className="px-6 py-3.5 bg-[#DB2777] hover:bg-[#C21D5C] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-lg cursor-pointer"
+                className="px-6 py-3.5 bg-[#C9A035] hover:bg-[#A8832A] text-white rounded-full text-xs font-bold transition-all duration-200 shadow-lg cursor-pointer"
               >
                 Créez votre annonce
               </Link>
@@ -1211,7 +1211,7 @@ export default function HomePage() {
                 <Link
                   key={dest}
                   href={`/vehicules?location=${encodeURIComponent(dest)}`}
-                  className="px-4 py-2 bg-brand-beige border border-brand-border/60 hover:border-[#DB2777] hover:text-[#DB2777] text-brand-text rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
+                  className="px-4 py-2 bg-brand-beige border border-brand-border/60 hover:border-[#C9A035] hover:text-[#C9A035] text-brand-text rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
                 >
                   {dest}
                 </Link>
@@ -1244,7 +1244,7 @@ export default function HomePage() {
                 <Link
                   key={idx}
                   href={`/vehicules?type=${cat.type}`}
-                  className="px-4 py-2 bg-brand-beige border border-brand-border/60 hover:border-[#DB2777] hover:text-[#DB2777] text-brand-text rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
+                  className="px-4 py-2 bg-brand-beige border border-brand-border/60 hover:border-[#C9A035] hover:text-[#C9A035] text-brand-text rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
                 >
                   {cat.label}
                 </Link>

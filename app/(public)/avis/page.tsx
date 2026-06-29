@@ -196,7 +196,7 @@ export default function AvisPage() {
         <div className="max-w-6xl mx-auto px-6 flex justify-center md:justify-start space-x-8">
           <Link 
             href="/avis"
-            className="py-4 text-xs font-bold transition-all border-b-2 border-[#DB2777] text-brand-text"
+            className="py-4 text-xs font-bold transition-all border-b-2 border-[#C9A035] text-brand-text"
           >
             Avis de la communauté
           </Link>
@@ -298,7 +298,7 @@ export default function AvisPage() {
             </p>
             <button
               onClick={() => setShowModal(true)}
-              className="w-full flex items-center justify-center space-x-2 py-3 bg-[#DB2777] hover:bg-[#C21D5C] text-white rounded-xl text-xs font-bold transition-all duration-200 shadow-md cursor-pointer"
+              className="w-full flex items-center justify-center space-x-2 py-3 bg-[#C9A035] hover:bg-[#A8832A] text-white rounded-xl text-xs font-bold transition-all duration-200 shadow-md cursor-pointer"
             >
               <Sparkles className="w-4 h-4" />
               <span>Laisser un avis client</span>
@@ -566,7 +566,7 @@ export default function AvisPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-[#DB2777] hover:bg-[#C21D5C] text-white rounded-xl text-xs font-bold shadow-md transition-all duration-200 cursor-pointer"
+                  className="px-6 py-3 bg-[#C9A035] hover:bg-[#A8832A] text-white rounded-xl text-xs font-bold shadow-md transition-all duration-200 cursor-pointer"
                 >
                   Publier mon avis
                 </button>

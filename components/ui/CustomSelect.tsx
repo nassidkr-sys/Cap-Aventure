@@ -113,7 +113,7 @@ export default function CustomSelect({
             className={`
               absolute left-5 font-extrabold transition-all duration-200 pointer-events-none
               ${(open || selected)
-                ? 'top-1.5 text-[9px] uppercase tracking-widest text-[#DB2777]'
+                ? 'top-1.5 text-[9px] uppercase tracking-widest text-[#C9A035]'
                 : 'top-1/2 -translate-y-1/2 text-xs text-brand-muted font-bold'
               }
             `}

@@ -115,7 +115,7 @@ export default function PhotosCommunautePage() {
           </Link>
           <Link 
             href="/communaute/photos"
-            className="py-4 text-xs font-bold transition-all border-b-2 border-[#DB2777] text-brand-text"
+            className="py-4 text-xs font-bold transition-all border-b-2 border-[#C9A035] text-brand-text"
           >
             Photos de la communauté
           </Link>
@@ -129,7 +129,7 @@ export default function PhotosCommunautePage() {
         <div className="space-y-4">
           <Link 
             href="/" 
-            className="inline-flex items-center space-x-2 text-xs font-bold text-brand-muted hover:text-[#DB2777] transition-colors duration-200"
+            className="inline-flex items-center space-x-2 text-xs font-bold text-brand-muted hover:text-[#C9A035] transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Retour à l'accueil</span>
@@ -139,17 +139,17 @@ export default function PhotosCommunautePage() {
             <span>/</span>
             <span className="hover:text-brand-text cursor-pointer">La communauté de Cap Aventure</span>
             <span>/</span>
-            <span className="text-[#DB2777]">Photos de la communauté</span>
+            <span className="text-[#C9A035]">Photos de la communauté</span>
           </div>
         </div>
 
         {/* Header Block */}
         <div className="space-y-4 max-w-2xl">
           <div className="space-y-2">
-            <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block">
+            <span className="text-[#C9A035] font-extrabold text-xs uppercase tracking-widest block">
               La communauté de Cap Aventure
             </span>
-            <div className="h-1 w-12 bg-[#DB2777] rounded-full"></div>
+            <div className="h-1 w-12 bg-[#C9A035] rounded-full"></div>
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold text-brand-text tracking-tight">
             Photos de la communauté
@@ -181,14 +181,14 @@ export default function PhotosCommunautePage() {
               <div className="p-4 flex items-center justify-between">
                 <div className="space-y-0.5">
                   <p className="text-[10px] font-bold text-brand-muted flex items-center">
-                    <MapPin className="w-3 h-3 text-[#DB2777] mr-1" />
+                    <MapPin className="w-3 h-3 text-[#C9A035] mr-1" />
                     {photo.location}
                   </p>
                   <p className="text-xs font-extrabold text-brand-text">Par {photo.author}</p>
                 </div>
                 <button
                   onClick={(e) => handleLike(photo.id, e)}
-                  className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-full border border-brand-border/60 hover:bg-brand-hover text-brand-muted hover:text-[#DB2777] transition-all cursor-pointer"
+                  className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-full border border-brand-border/60 hover:bg-brand-hover text-brand-muted hover:text-[#C9A035] transition-all cursor-pointer"
                 >
                   <Heart className="w-3.5 h-3.5 fill-current" />
                   <span className="text-[10px] font-extrabold font-mono">{photo.likes}</span>
@@ -261,17 +261,17 @@ export default function PhotosCommunautePage() {
             <div className="w-full md:w-80 p-8 flex flex-col justify-between bg-white text-brand-text">
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <span className="text-[#DB2777] font-extrabold text-[10px] uppercase tracking-widest block">Cap Aventure Trip</span>
+                  <span className="text-[#C9A035] font-extrabold text-[10px] uppercase tracking-widest block">Cap Aventure Trip</span>
                   <h3 className="text-xl font-extrabold">{selectedPhoto.location}</h3>
                 </div>
 
                 <div className="space-y-3 font-semibold text-xs text-brand-muted">
                   <div className="flex items-center space-x-2">
-                    <MapPin className="w-4 h-4 text-[#DB2777]" />
+                    <MapPin className="w-4 h-4 text-[#C9A035]" />
                     <span>Destination : {selectedPhoto.location}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Calendar className="w-4 h-4 text-[#DB2777]" />
+                    <Calendar className="w-4 h-4 text-[#C9A035]" />
                     <span>Voyage effectué en {selectedPhoto.date}</span>
                   </div>
                   <p className="text-brand-text font-bold pt-2">
@@ -283,7 +283,7 @@ export default function PhotosCommunautePage() {
               <div className="border-t border-brand-border/60 pt-6 flex items-center justify-between">
                 <button
                   onClick={(e) => handleLike(selectedPhoto.id, e)}
-                  className="flex items-center space-x-2 px-4 py-2 rounded-full border border-brand-border/60 hover:bg-brand-hover text-[#DB2777] font-bold text-xs transition-all cursor-pointer"
+                  className="flex items-center space-x-2 px-4 py-2 rounded-full border border-brand-border/60 hover:bg-brand-hover text-[#C9A035] font-bold text-xs transition-all cursor-pointer"
                 >
                   <Heart className="w-4 h-4 fill-current" />
                   <span>J'aime ({selectedPhoto.likes})</span>

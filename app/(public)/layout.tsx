@@ -158,7 +158,7 @@ export default function PublicLayout({
           {/* Left — Blog promo */}
           <div className="space-y-6">
             <div className="space-y-1">
-              <span className="text-[#DB2777] font-extrabold text-[10px] uppercase tracking-widest block">Le Blog Cap Aventure</span>
+              <span className="text-[#C9A035] font-extrabold text-[10px] uppercase tracking-widest block">Le Blog Cap Aventure</span>
               <h2 className="text-2xl md:text-3xl font-extrabold text-[#1E293B] tracking-tight leading-tight">
                 Inspirations, conseils & récits<br/>de voyage en camping-car
               </h2>
@@ -190,7 +190,7 @@ export default function PublicLayout({
           {/* Right — Newsletter */}
           <div className="bg-white rounded-3xl border border-[#E2E8F0] p-10 shadow-sm space-y-6">
             <div className="space-y-1">
-              <span className="text-[#DB2777] font-extrabold text-[10px] uppercase tracking-widest block">Newsletter</span>
+              <span className="text-[#C9A035] font-extrabold text-[10px] uppercase tracking-widest block">Newsletter</span>
               <h3 className="text-xl font-extrabold text-[#1E293B] leading-tight">
                 Les meilleures destinations<br/>directement dans votre boîte mail
               </h3>
@@ -203,12 +203,12 @@ export default function PublicLayout({
                 <input
                   type="email"
                   placeholder="Votre adresse email"
-                  className="w-full px-5 py-3.5 bg-[#F8FAFC] border-2 border-[#E2E8F0] rounded-2xl text-sm font-semibold text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#DB2777] focus:ring-4 focus:ring-[#DB2777]/10 transition-all duration-200"
+                  className="w-full px-5 py-3.5 bg-[#F8FAFC] border-2 border-[#E2E8F0] rounded-2xl text-sm font-semibold text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#C9A035] focus:ring-4 focus:ring-[#C9A035]/10 transition-all duration-200"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full px-5 py-3.5 bg-[#DB2777] hover:bg-[#BE185D] text-white rounded-2xl text-sm font-extrabold transition-all duration-200 shadow-md shadow-[#DB2777]/20 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full px-5 py-3.5 bg-[#C9A035] hover:bg-[#A8832A] text-white rounded-2xl text-sm font-extrabold transition-all duration-200 shadow-md shadow-[#C9A035]/20 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
               >
                 Je m'inscris gratuitement
               </button>
@@ -243,7 +243,7 @@ export default function PublicLayout({
                     key={social.label}
                     href="#"
                     aria-label={social.label}
-                    className="w-8 h-8 rounded-full flex items-center justify-center text-[#94A3B8] hover:text-[#DB2777] hover:bg-[#DB2777]/8 transition-all duration-200"
+                    className="w-8 h-8 rounded-full flex items-center justify-center text-[#94A3B8] hover:text-[#C9A035] hover:bg-[#C9A035]/8 transition-all duration-200"
                   >
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d={social.d} /></svg>
                   </a>
@@ -263,7 +263,7 @@ export default function PublicLayout({
                   { label: "Centre d'aide Voyageurs", href: '/contact' },
                 ].map((item) => (
                   <li key={item.label}>
-                    <Link href={item.href} className="hover:text-[#DB2777] transition-colors duration-200 font-medium">
+                    <Link href={item.href} className="hover:text-[#C9A035] transition-colors duration-200 font-medium">
                       {item.label}
                     </Link>
                   </li>
@@ -283,7 +283,7 @@ export default function PublicLayout({
                   { label: "Centre d'aide Hôtes", href: '/contact' },
                 ].map((item) => (
                   <li key={item.label}>
-                    <Link href={item.href} className="hover:text-[#DB2777] transition-colors duration-200 font-medium">
+                    <Link href={item.href} className="hover:text-[#C9A035] transition-colors duration-200 font-medium">
                       {item.label}
                     </Link>
                   </li>
@@ -303,7 +303,7 @@ export default function PublicLayout({
                   { label: 'Recrutement', href: '/contact' },
                 ].map((item) => (
                   <li key={item.label}>
-                    <Link href={item.href} className="hover:text-[#DB2777] transition-colors duration-200 font-medium">
+                    <Link href={item.href} className="hover:text-[#C9A035] transition-colors duration-200 font-medium">
                       {item.label}
                     </Link>
                   </li>
@@ -317,8 +317,8 @@ export default function PublicLayout({
               <ul className="space-y-2.5 text-xs text-[#64748B]">
                 <li className="font-medium">14 Av. de la Liberté</li>
                 <li className="font-medium">33000 Bordeaux, France</li>
-                <li><a href="mailto:contact@cap-aventure.fr" className="hover:text-[#DB2777] transition-colors font-medium">contact@cap-aventure.fr</a></li>
-                <li><a href="tel:+33556123456" className="hover:text-[#DB2777] transition-colors font-medium">+33 5 56 12 34 56</a></li>
+                <li><a href="mailto:contact@cap-aventure.fr" className="hover:text-[#C9A035] transition-colors font-medium">contact@cap-aventure.fr</a></li>
+                <li><a href="tel:+33556123456" className="hover:text-[#C9A035] transition-colors font-medium">+33 5 56 12 34 56</a></li>
                 <li className="font-medium text-[#94A3B8]">Lun–Sam · 9h00–19h00</li>
               </ul>
             </div>

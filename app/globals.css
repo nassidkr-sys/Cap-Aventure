@@ -4,24 +4,36 @@
   --font-sans: var(--font-jakarta), system-ui, sans-serif;
   --font-body: var(--font-dm), system-ui, sans-serif;
   
-  --color-brand-beige: #FAFBF9;
+  /* ——— Palette Cap Aventure — Navy + Or ——— */
+  /* Fondée sur les couleurs exactes du logo : Navy #1C2B4A | Or #C9A035  */
+
+  --color-brand-beige: #F7F4EE;          /* Crème chaude — papier vieilli, carte de voyage */
   --color-brand-card: #FFFFFF;
-  --color-brand-hover: #F1F5F1;
-  --color-brand-border: #E2E8F0;
-  --color-brand-text: #1E293B;
-  --color-brand-muted: #64748B;
-  --color-brand-accent: #0F766E;
-  --color-brand-accent-hover: #0D5C56;
-  --color-brand-secondary: #D97706;
-  --color-brand-secondary-hover: #B45309;
+  --color-brand-hover: #EDE8DC;          /* Sable doré clair au hover */
+  --color-brand-border: #DDD5C4;         /* Bordure warm — cohérente avec le fond crème */
+
+  --color-brand-text: #1C2B4A;           /* Navy — couleur exacte du logo */
+  --color-brand-muted: #526280;          /* Navy atténué — pour textes secondaires */
+
+  --color-brand-accent: #C9A035;         /* Or — couleur exacte du logo */
+  --color-brand-accent-hover: #A8832A;   /* Or foncé au hover */
+
+  --color-brand-navy: #1C2B4A;           /* Alias explicite — Navy logo */
+  --color-brand-navy-hover: #142038;     /* Navy profond au hover */
+  --color-brand-gold: #C9A035;           /* Alias explicite — Or logo */
+  --color-brand-gold-light: #FEF3CD;     /* Teinte or claire (badges, fonds) */
+
+  --color-brand-secondary: #1C2B4A;      /* Navy comme secondaire */
+  --color-brand-secondary-hover: #142038;
+
   --color-brand-success: #16A34A;
   --color-brand-warning: #CA8A04;
   --color-brand-error: #DC2626;
 }
 
 :root {
-  --background: #FAFBF9;
-  --foreground: #1E293B;
+  --background: #F7F4EE;
+  --foreground: #1C2B4A;
 }
 
 body {
@@ -57,7 +69,7 @@ body {
 }
 .hover-lift:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px -6px rgba(15, 118, 110, 0.12), 0 4px 8px -2px rgba(15, 118, 110, 0.06);
+  box-shadow: 0 12px 28px -6px rgba(28, 43, 74, 0.14), 0 4px 8px -2px rgba(201, 160, 53, 0.08);
 }
 
 .btn-transition {
@@ -135,10 +147,10 @@ body {
   50% { transform: translateY(-6px); }
 }
 
-/* Pulse accent glow */
+/* Pulse gold glow — accordé au brand Or */
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0); }
-  50% { box-shadow: 0 0 0 8px rgba(15, 118, 110, 0.08); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 160, 53, 0); }
+  50% { box-shadow: 0 0 0 8px rgba(201, 160, 53, 0.10); }
 }
 
 /* Fade in stagger pour les listes */
@@ -205,28 +217,28 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAFBF9;
+  background: #F7F4EE;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #C9A035;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0F766E;
+  background: #1C2B4A;
 }
 
 /* =============================================
-   FOCUS RING GLOBAL — ACCESSIBILITÉ
+   FOCUS RING GLOBAL — ACCESSIBILITÉ (Or)
    ============================================= */
 :focus-visible {
-  outline: 2px solid #0F766E;
+  outline: 2px solid #C9A035;
   outline-offset: 2px;
 }
 
 /* =============================================
-   SELECTION COULEUR ACCENT
+   SELECTION COULEUR ACCENT (Or)
    ============================================= */
 ::selection {
-  background-color: rgba(15, 118, 110, 0.15);
-  color: #0F766E;
+  background-color: rgba(201, 160, 53, 0.18);
+  color: #1C2B4A;
 }
