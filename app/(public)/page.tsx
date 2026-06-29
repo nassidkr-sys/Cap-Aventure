@@ -1190,7 +1190,72 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. Pourquoi louer chez nous (Value Prop) */}
+      {/* 8. Liens de Destination & Catégories (SEO Pills Section) */}
+      <section className="py-24 px-6 bg-white border-b border-brand-border w-full">
+        <div className="max-w-7xl mx-auto space-y-16">
+          
+          {/* Subsection 1: Destinations */}
+          <div className="space-y-6">
+            <h3 className="text-xl md:text-2xl font-extrabold text-brand-text tracking-tight">
+              Location de camping-cars en Europe et dans le monde entier
+            </h3>
+            <p className="text-xs md:text-sm text-brand-muted leading-relaxed max-w-5xl">
+              Votre prochain road trip vous attend. Dans votre pays ou à l'étranger, louez un camping-car et explorez les routes mythiques et celles encore hors des sentiers battus, en toute liberté au volant. Garez-vous le long de plages tranquilles, réveillez-vous face à la montagne et découvrez des endroits magnifiques que seule la route peut révéler.
+            </p>
+            <div className="flex flex-wrap gap-2.5 pt-2">
+              {[
+                "Espagne", "Belgique", "Royaume-Uni", "Grèce", "Croatie", "France", 
+                "USA", "Suisse", "Islande", "Autriche", "Pays-Bas", "Slovénie", 
+                "Italie", "Norvège", "Suède", "Allemagne", "Portugal", "Irlande"
+              ].map((dest) => (
+                <Link
+                  key={dest}
+                  href={`/vehicules?location=${encodeURIComponent(dest)}`}
+                  className="px-4 py-2 bg-brand-beige border border-brand-border/60 hover:border-[#DB2777] hover:text-[#DB2777] text-brand-text rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
+                >
+                  {dest}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Subsection 2: Types & Categories */}
+          <div className="space-y-6">
+            <h3 className="text-xl md:text-2xl font-extrabold text-brand-text tracking-tight">
+              Louez un camping-car auprès d'un particulier.
+            </h3>
+            <p className="text-xs md:text-sm text-brand-muted leading-relaxed max-w-5xl">
+              Cap Aventure propose des véhicules de toutes tailles et de tous types à la location au Royaume-Uni et en Europe. Que vous voyagiez en famille, entre amis, en couple, seul ou avec votre animal de compagnie, vous trouverez sur notre plateforme le camping-car idéal.
+            </p>
+            <div className="flex flex-wrap gap-2.5 pt-2">
+              {[
+                { label: "camping-car", type: "camping_car_profile" },
+                { label: "grand camping-car", type: "camping_car_integral" },
+                { label: "camping-car discret", type: "van_amenege" },
+                { label: "camping-car profilé", type: "camping_car_profile" },
+                { label: "Camping-car de classe A", type: "camping_car_integral" },
+                { label: "Caravane", type: "fourgon_amenege" },
+                { label: "Camping-cars adaptés aux familles", type: "camping_car_profile" },
+                { label: "camping-cars acceptant les animaux domestiques", type: "fourgon_amenege" },
+                { label: "Voyage surf en camping-car", type: "van_amenege" },
+                { label: "camping-cars abordables", type: "fourgon_amenege" },
+                { label: "Nous aimons la Californie", type: "van_amenege" }
+              ].map((cat, idx) => (
+                <Link
+                  key={idx}
+                  href={`/vehicules?type=${cat.type}`}
+                  className="px-4 py-2 bg-brand-beige border border-brand-border/60 hover:border-[#DB2777] hover:text-[#DB2777] text-brand-text rounded-full text-xs font-bold transition-all duration-200 cursor-pointer"
+                >
+                  {cat.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 9. Pourquoi louer chez nous (Value Prop) */}
       <section className="py-24 px-6 max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center border-t border-brand-border">
         <div className="space-y-6">
           <span className="text-brand-accent font-extrabold text-xs uppercase tracking-widest block">Notre Promesse</span>
