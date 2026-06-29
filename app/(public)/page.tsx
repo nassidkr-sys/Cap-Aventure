@@ -343,19 +343,17 @@ export default function HomePage() {
 
       {/* 3. Catégories Section */}
       <section className="py-24 px-6 max-w-7xl mx-auto w-full space-y-16">
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <div className="space-y-3 flex flex-col items-center">
-            <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block text-center">
-              Choisissez le bon véhicule
-            </span>
-            <div className="h-1.5 w-16 bg-[#DB2777] rounded-full"></div>
+        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 lg:gap-16">
+          <div className="lg:w-5/12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
+              Vous recherchez un camping-car ou un fourgon aménagé ?
+            </h2>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
-            Vous recherchez un camping-car ou un fourgon aménagé ?
-          </h2>
-          <p className="text-sm md:text-base text-brand-muted leading-relaxed max-w-2xl mx-auto">
-            Les meilleurs road trips commencent par les bonnes questions. Pour la location d'un camping-car ou d'un fourgon aménagé, chaque projet de voyage a son véhicule. Nous vous aiderons à choisir celui qui vous convient le mieux, pour que votre voyage commence du bon pied.
-          </p>
+          <div className="lg:w-6/12">
+            <p className="text-sm md:text-base text-brand-muted leading-relaxed">
+              Les meilleurs road trips commencent par les bonnes questions. Pour la location d'un camping-car ou d'un fourgon aménagé, chaque projet de voyage a son véhicule. Nous vous aiderons à choisir celui qui vous convient le mieux, pour que votre voyage commence du bon pied.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
