@@ -262,7 +262,7 @@ export default function PublicLayout({
                   { label: 'Avis de nos utilisateurs', href: '/avis' },
                   { label: "Centre d'aide Voyageurs", href: '/contact' },
                 ].map((item) => (
-                  <li key={item.href}>
+                  <li key={item.label}>
                     <Link href={item.href} className="hover:text-[#DB2777] transition-colors duration-200 font-medium">
                       {item.label}
                     </Link>
@@ -282,7 +282,7 @@ export default function PublicLayout({
                   { label: 'Assistance panne', href: '/contact' },
                   { label: "Centre d'aide Hôtes", href: '/contact' },
                 ].map((item) => (
-                  <li key={item.href}>
+                  <li key={item.label}>
                     <Link href={item.href} className="hover:text-[#DB2777] transition-colors duration-200 font-medium">
                       {item.label}
                     </Link>
@@ -302,7 +302,7 @@ export default function PublicLayout({
                   { label: 'Presse & Médias', href: '/contact' },
                   { label: 'Recrutement', href: '/contact' },
                 ].map((item) => (
-                  <li key={item.href}>
+                  <li key={item.label}>
                     <Link href={item.href} className="hover:text-[#DB2777] transition-colors duration-200 font-medium">
                       {item.label}
                     </Link>
