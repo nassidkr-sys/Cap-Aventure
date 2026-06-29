@@ -1048,7 +1048,7 @@ export default function HomePage() {
                 Lire les avis sur Cap Aventure
               </Link>
               <Link 
-                href="/vehicules"
+                href="/communaute/photos"
                 className="px-6 py-3.5 bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#2563EB] rounded-full text-xs font-bold transition-all duration-200 text-center cursor-pointer"
               >
                 Découvrez les photos de notre communauté
