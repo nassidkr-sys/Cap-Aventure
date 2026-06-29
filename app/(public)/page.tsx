@@ -60,31 +60,39 @@ export default function HomePage() {
   const categories = [
     {
       type: 'van_amenege',
-      name: 'Van Aménagé',
-      desc: 'Compact et passe-partout (< 2m). Idéal pour se garer au plus près de la nature.',
-      image: 'https://images.unsplash.com/photo-1537243912151-1d5be8ad7fa0?auto=format&fit=crop&w=600&q=80',
-      price: 'À partir de 120€/j'
-    },
-    {
-      type: 'camping_car_profile',
-      name: 'Camping-car Profilé',
-      desc: 'Le compromis parfait. Grand confort de vie intérieure et silhouette aérodynamique.',
-      image: 'https://images.unsplash.com/photo-1513313778780-9ae4807465f2?auto=format&fit=crop&w=600&q=80',
-      price: 'À partir de 150€/j'
+      name: 'camping-car',
+      subtitle: 'Agile et aventureux',
+      desc: "Petit, facile à manœuvrer et plein de charme, le camping-car est idéal pour les voyageurs en quête d'aventures spontanées en pleine nature ou en ville.",
+      cta: 'Louez un camping-car',
+      bgColor: 'bg-pink-100/60',
+      illustration: 'poptop'
     },
     {
       type: 'camping_car_integral',
-      name: 'Camping-car Intégral',
-      desc: 'Le luxe absolu du voyage panoramique. Espace intérieur hors norme pour toute la famille.',
-      image: 'https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?auto=format&fit=crop&w=600&q=80',
-      price: 'À partir de 220€/j'
+      name: 'grand camping-car',
+      subtitle: 'Spacieux et polyvalent',
+      desc: "Idéal pour les couples ou les courts séjours en famille, ce grand camping-car offre un espace pratique et la liberté d'explorer facilement tous les endroits.",
+      cta: 'Louez un grand camping-car',
+      bgColor: 'bg-blue-100/60',
+      illustration: 'grand'
     },
     {
       type: 'fourgon_amenege',
-      name: 'Fourgon Aménagé',
-      desc: 'Maniable et spacieux. Idéal pour les sportifs nécessitant d\'embarquer du matériel.',
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80',
-      price: 'À partir de 135€/j'
+      name: 'camping-car discret',
+      subtitle: 'Élégant et bien équipé',
+      desc: "Compact mais entièrement équipé, le design élégant et discret de ce camping-car permet d'économiser du carburant, de s'adapter aux rues de la ville et de vous garantir des aventures sans tracas.",
+      cta: 'Louez un camping-car discret',
+      bgColor: 'bg-yellow-100/60',
+      illustration: 'discreet'
+    },
+    {
+      type: 'camping_car_profile',
+      name: 'camping-car profilé',
+      subtitle: 'Spacieux et idéal pour voyager',
+      desc: "Idéal pour les familles ou les groupes plus importants, ce camping-car profilé est spacieux et confortable, faisant des voyages en voiture un véritable plaisir pour les adultes comme pour les enfants.",
+      cta: 'Louez un camping-car profilé',
+      bgColor: 'bg-pink-100/60',
+      illustration: 'profile'
     }
   ];
 
@@ -326,48 +334,119 @@ export default function HomePage() {
 
       {/* 3. Catégories Section */}
       <section className="py-24 px-6 max-w-7xl mx-auto w-full space-y-16">
-        <div className="text-center max-w-xl mx-auto space-y-4">
-          <span className="text-brand-accent font-extrabold text-xs uppercase tracking-widest block">Nos Véhicules</span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight">
-            Choisissez la forme de votre liberté
-          </h2>
-          <p className="text-sm md:text-base text-brand-muted">
-            Quatre familles de véhicules aménagés avec soin pour s'adapter à toutes vos envies de voyages routiers.
-          </p>
+        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 lg:gap-16">
+          <div className="lg:w-5/12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
+              Vous recherchez un camping-car ou un fourgon aménagé ?
+            </h2>
+          </div>
+          <div className="lg:w-6/12">
+            <p className="text-sm md:text-base text-brand-muted leading-relaxed">
+              Les meilleurs road trips commencent par les bonnes questions. Pour la location d'un camping-car ou d'un fourgon aménagé, chaque projet de voyage a son véhicule. Nous vous aiderons à choisir celui qui vous convient le mieux, pour que votre voyage commence du bon pied.
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((cat) => (
-            <Link 
+            <div 
               key={cat.type}
-              href={`/vehicules?type=${cat.type}`}
-              className="group flex flex-col bg-white border border-brand-border rounded-2xl overflow-hidden hover-lift shadow-sm transition-all duration-300"
+              className="group flex flex-col bg-white border border-brand-border rounded-[2rem] p-6 justify-between h-full hover-lift shadow-sm transition-all duration-300"
             >
-              <div className="relative h-48 overflow-hidden bg-brand-hover">
-                <img 
-                  src={cat.image} 
-                  alt={cat.name} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute top-3 right-3 bg-brand-text/80 backdrop-blur-sm text-brand-secondary px-3 py-1 rounded-full text-xs font-bold font-mono">
-                  {cat.price}
-                </div>
+              {/* Image / Illustration Container */}
+              <div className="relative h-44 flex items-center justify-center overflow-visible mb-6">
+                {/* Background Decor Card */}
+                <div className={`w-28 h-28 ${cat.bgColor} rounded-[2rem] absolute transition-transform duration-300 group-hover:scale-105`} />
+                
+                {/* Inline SVG Illustrations */}
+                {cat.illustration === 'poptop' && (
+                  <svg viewBox="0 0 200 120" className="w-48 h-28 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:translate-y-[-4px]">
+                    <path d="M 45 42 L 135 20 L 130 42 Z" fill="#F1F5F9" stroke="#1E293B" strokeWidth="2" strokeLinejoin="round" />
+                    <path d="M 130 20 L 133 42" stroke="#1E293B" strokeWidth="1.5" />
+                    <line x1="43" y1="42" x2="142" y2="42" stroke="#1E293B" strokeWidth="3.5" strokeLinecap="round" />
+                    <path d="M 32 82 L 32 46 C 32 44, 34 42, 37 42 L 152 42 C 160 42, 166 48, 168 56 L 172 74 C 173 78, 171 82, 167 82 Z" fill="#2DD4BF" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="42" y="48" width="34" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="84" y="48" width="34" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 126 48 L 152 48 C 156 48, 159 51, 160 55 L 162 63 L 126 63 Z" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <circle cx="62" cy="82" r="14" fill="#1E293B" />
+                    <circle cx="62" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                    <circle cx="138" cy="82" r="14" fill="#1E293B" />
+                    <circle cx="138" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="32" y1="69" x2="171" y2="69" stroke="#1E293B" strokeWidth="1.5" />
+                  </svg>
+                )}
+                {cat.illustration === 'grand' && (
+                  <svg viewBox="0 0 200 120" className="w-48 h-28 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:translate-y-[-4px]">
+                    <path d="M 20 54 L 32 54 M 20 66 L 32 66 M 22 50 L 22 70" stroke="#475569" strokeWidth="2" strokeLinecap="round" />
+                    <circle cx="22" cy="54" r="3" stroke="#475569" strokeWidth="1.5" fill="none" />
+                    <circle cx="22" cy="66" r="3" stroke="#475569" strokeWidth="1.5" fill="none" />
+                    <path d="M 32 82 L 32 40 C 32 38, 34 36, 37 36 L 152 36 C 158 36, 164 41, 166 48 L 172 74 C 173 78, 171 82, 167 82 Z" fill="#64748B" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 37 36 C 37 33, 42 30, 48 30 L 140 30 C 145 30, 148 33, 148 36 Z" fill="#64748B" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="42" y="44" width="42" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="92" y="44" width="30" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 130 44 L 154 44 C 158 44, 161 47, 162 51 L 164 59 L 130 59 Z" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <circle cx="62" cy="82" r="14" fill="#1E293B" />
+                    <circle cx="62" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                    <circle cx="138" cy="82" r="14" fill="#1E293B" />
+                    <circle cx="138" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="32" y1="66" x2="171" y2="66" stroke="#1E293B" strokeWidth="1.5" />
+                  </svg>
+                )}
+                {cat.illustration === 'discreet' && (
+                  <svg viewBox="0 0 200 120" className="w-48 h-28 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:translate-y-[-4px]">
+                    <path d="M 32 82 L 32 42 C 32 40, 34 38, 37 38 L 150 38 C 156 38, 162 43, 164 50 L 170 74 C 171 78, 169 82, 165 82 Z" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 37 38 L 140 38 L 140 34 C 140 34, 138 32, 134 32 L 44 32 C 40 32, 37 34, 37 34 Z" fill="#F8FAFC" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="44" y="44" width="38" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="90" y="44" width="34" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 132 44 L 154 44 C 157 44, 159 47, 160 50 L 162 59 L 132 59 Z" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <circle cx="62" cy="82" r="14" fill="#1E293B" />
+                    <circle cx="62" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                    <circle cx="138" cy="82" r="14" fill="#1E293B" />
+                    <circle cx="138" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                    <line x1="32" y1="67" x2="168" y2="67" stroke="#1E293B" strokeWidth="1.5" />
+                  </svg>
+                )}
+                {cat.illustration === 'profile' && (
+                  <svg viewBox="0 0 200 120" className="w-48 h-28 z-10 drop-shadow-md select-none pointer-events-none transition-transform duration-300 group-hover:translate-y-[-4px]">
+                    <path d="M 68 36 C 68 36, 74 30, 84 30 L 144 30 C 150 30, 156 34, 158 40 L 166 60 L 140 60 Z" fill="#E2E8F0" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 28 82 L 28 36 C 28 34, 30 32, 34 32 L 142 32 L 142 82 Z" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 142 82 L 142 52 L 158 52 C 162 52, 166 56, 168 62 L 172 74 C 173 78, 171 82, 167 82 Z" fill="#E2E8F0" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="38" y="40" width="40" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <rect x="88" y="40" width="34" height="15" rx="3" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 144 54 L 158 54 C 160 54, 162 56, 163 59 L 165 67 L 144 67 Z" fill="#38BDF8" stroke="#1E293B" strokeWidth="2" />
+                    <path d="M 30 70 Q 70 56, 110 70 T 142 66 L 142 72 Q 100 78, 30 75 Z" fill="#3B82F6" opacity="0.8" />
+                    <circle cx="58" cy="82" r="14" fill="#1E293B" />
+                    <circle cx="58" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                    <circle cx="130" cy="82" r="14" fill="#1E293B" />
+                    <circle cx="130" cy="82" r="5" fill="#FFFFFF" stroke="#1E293B" strokeWidth="2" />
+                  </svg>
+                )}
               </div>
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div className="space-y-2">
-                  <h3 className="font-extrabold text-brand-text group-hover:text-brand-accent transition-colors duration-200">
+
+              {/* Text Area */}
+              <div className="flex-1 flex flex-col justify-between space-y-4">
+                <div className="space-y-2 text-center sm:text-left">
+                  <h3 className="font-extrabold text-brand-text text-lg group-hover:text-brand-accent transition-colors duration-200">
                     {cat.name}
                   </h3>
+                  <p className="text-xs text-brand-accent font-bold tracking-wide uppercase">
+                    {cat.subtitle}
+                  </p>
                   <p className="text-xs text-brand-muted leading-relaxed">
                     {cat.desc}
                   </p>
                 </div>
-                <div className="mt-4 pt-4 border-t border-brand-border flex items-center justify-between text-brand-accent text-xs font-bold">
-                  <span>Explorer la flotte</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+                <div className="pt-4 border-t border-brand-border flex items-center justify-between">
+                  <Link 
+                    href={`/vehicules?type=${cat.type}`}
+                    className="text-xs font-extrabold text-[#DB2777] hover:text-[#BE185D] hover:underline transition-colors duration-200"
+                  >
+                    {cat.cta}
+                  </Link>
+                  <ArrowRight className="w-3.5 h-3.5 text-[#DB2777] transition-transform duration-200 group-hover:translate-x-1" />
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
