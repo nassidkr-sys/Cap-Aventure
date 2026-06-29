@@ -191,19 +191,222 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Grandes Villes Section */}
-      <section className="py-12 bg-white border-b border-brand-border">
-        <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-brand-muted">
-          <span>Destinations de départ populaires :</span>
-          {['Bordeaux', 'Paris', 'Lyon', 'Toulouse'].map((city) => (
-            <button
-              key={city}
-              onClick={() => router.push(`/vehicules?location=${city}`)}
-              className="px-4 py-2 bg-brand-beige hover:bg-brand-accent hover:text-white rounded-full border border-brand-border/60 transition-all duration-200 cursor-pointer"
+      {/* 2. Destinations Section (France & Belgique) */}
+      <section className="py-24 bg-white border-b border-brand-border px-6">
+        <div className="max-w-7xl mx-auto space-y-16">
+          
+          {/* Header */}
+          <div className="space-y-4 max-w-3xl">
+            <div className="space-y-2">
+              <span className="text-[#DB2777] font-extrabold text-xs uppercase tracking-widest block">
+                Nos destinations
+              </span>
+              <div className="h-1 w-12 bg-[#DB2777] rounded-full"></div>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-brand-text tracking-tight">
+              En camping-car, tout est possible
+            </h2>
+            <p className="text-xs md:text-sm text-brand-muted leading-relaxed max-w-2xl">
+              Prendre la route n'a jamais été aussi simple. Louez un camping-car en France ou en Belgique, et évadez-vous vers les plus beaux paysages d'Europe. Pour quelques jours ou plusieurs semaines, à vous de choisir.
+            </p>
+          </div>
+
+          {/* Asymmetric Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[160px]">
+            {/* Card 1: Bruges */}
+            <button 
+              onClick={() => router.push('/vehicules?location=Bruges')}
+              className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
             >
-              📍 {city}
+              <img 
+                src="https://images.unsplash.com/photo-1473862170180-84427c485ade?auto=format&fit=crop&w=600&q=80" 
+                alt="Bruges"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+                <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                  🇧🇪
+                </div>
+                <div className="text-left leading-none">
+                  <p className="text-xs font-bold font-mono text-[#FEF08A]">Belgique</p>
+                  <p className="text-sm font-extrabold">Bruges</p>
+                </div>
+              </div>
             </button>
-          ))}
+
+            {/* Card 2: Mont Blanc */}
+            <button 
+              onClick={() => router.push('/vehicules?location=Chamonix')}
+              className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" 
+                alt="Mont Blanc"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+                <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                  🇫🇷
+                </div>
+                <div className="text-left leading-none">
+                  <p className="text-xs font-bold font-mono text-[#FEF08A]">France</p>
+                  <p className="text-sm font-extrabold">Mont Blanc</p>
+                </div>
+              </div>
+            </button>
+
+            {/* Card 3: Dinant (Tall Portrait) */}
+            <button 
+              onClick={() => router.push('/vehicules?location=Dinant')}
+              className="md:col-span-1 md:row-span-2 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80" 
+                alt="Dinant"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              <span className="absolute top-4 right-4 bg-[#DB2777] text-white px-2.5 py-0.5 rounded-full text-[9px] font-extrabold uppercase tracking-wide">Nouveau</span>
+              <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+                <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                  🇧🇪
+                </div>
+                <div className="text-left leading-none">
+                  <p className="text-xs font-bold font-mono text-[#FEF08A]">Belgique</p>
+                  <p className="text-sm font-extrabold">Dinant</p>
+                </div>
+              </div>
+            </button>
+
+            {/* Card 4: Châteaux de la Loire */}
+            <button 
+              onClick={() => router.push('/vehicules?location=Loire')}
+              className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1549880180-250966e86f68?auto=format&fit=crop&w=600&q=80" 
+                alt="Loire"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+                <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                  🇫🇷
+                </div>
+                <div className="text-left leading-none">
+                  <p className="text-xs font-bold font-mono text-[#FEF08A]">France</p>
+                  <p className="text-sm font-extrabold">Val de Loire</p>
+                </div>
+              </div>
+            </button>
+
+            {/* Card 5: Gorges du Verdon (Wide Landscape) */}
+            <button 
+              onClick={() => router.push('/vehicules?location=Verdon')}
+              className="md:col-span-2 md:row-span-2 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" 
+                alt="Verdon"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+                <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                  🇫🇷
+                </div>
+                <div className="text-left leading-none">
+                  <p className="text-xs font-bold font-mono text-[#FEF08A]">France</p>
+                  <p className="text-sm font-extrabold">Gorges du Verdon</p>
+                </div>
+              </div>
+            </button>
+
+            {/* Card 6: Étretat */}
+            <button 
+              onClick={() => router.push('/vehicules?location=Etretat')}
+              className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80" 
+                alt="Étretat"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+                <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                  🇫🇷
+                </div>
+                <div className="text-left leading-none">
+                  <p className="text-xs font-bold font-mono text-[#FEF08A]">France</p>
+                  <p className="text-sm font-extrabold">Étretat</p>
+                </div>
+              </div>
+            </button>
+
+            {/* Card 7: Les Ardennes */}
+            <button 
+              onClick={() => router.push('/vehicules?location=Ardennes')}
+              className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" 
+                alt="Ardennes"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+                <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                  🇧🇪
+                </div>
+                <div className="text-left leading-none">
+                  <p className="text-xs font-bold font-mono text-[#FEF08A]">Belgique</p>
+                  <p className="text-sm font-extrabold">Les Ardennes</p>
+                </div>
+              </div>
+            </button>
+
+            {/* Card 8: Bruxelles */}
+            <button 
+              onClick={() => router.push('/vehicules?location=Bruxelles')}
+              className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1563200787-17e923e4299b?auto=format&fit=crop&w=600&q=80" 
+                alt="Bruxelles"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+                <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                  🇧🇪
+                </div>
+                <div className="text-left leading-none">
+                  <p className="text-xs font-bold font-mono text-[#FEF08A]">Belgique</p>
+                  <p className="text-sm font-extrabold">Bruxelles</p>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          {/* Quick selection pills */}
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-6 border-t border-brand-border/60">
+            {['Paris', 'Bruxelles', 'Bordeaux', 'Bruges', 'Lyon', 'Gand', 'Marseille', 'Anvers', 'Nice', 'Namur', 'Nantes', 'Liège'].map((city) => {
+              const isBelgian = ['Bruxelles', 'Bruges', 'Gand', 'Anvers', 'Namur', 'Liège'].includes(city);
+              return (
+                <button
+                  key={city}
+                  onClick={() => router.push(`/vehicules?location=${city}`)}
+                  className="px-5 py-2.5 bg-brand-beige hover:bg-brand-accent hover:text-white rounded-full border border-brand-border/60 text-xs font-bold transition-all duration-200 cursor-pointer"
+                >
+                  {isBelgian ? '🇧🇪' : '🇫🇷'} {city}
+                </button>
+              );
+            })}
+          </div>
+
         </div>
       </section>
 
