@@ -42,7 +42,7 @@ export default function AdminLogin() {
         
         // 2. Mode secours si Firebase n'est pas encore configuré ou en offline
         const correctEmail = 'admin@cap-aventure.fr';
-        const correctPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'admin_secret_pentecote';
+        const correctPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'admin@123';
 
         if (email === correctEmail && password === correctPassword) {
           sessionStorage.setItem('admin_token', email);
@@ -128,7 +128,7 @@ export default function AdminLogin() {
               />
             </div>
             <div className="mt-1 flex justify-end">
-              <span className="text-[10px] text-brand-muted">Démo: admin_secret_pentecote</span>
+              <span className="text-[10px] text-brand-muted">Démo: admin@123</span>
             </div>
           </div>
 

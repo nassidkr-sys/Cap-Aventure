@@ -167,7 +167,7 @@ export default function ContactPage() {
               </div>
               <div className="space-y-1">
                 <h4 className="font-extrabold text-brand-text text-xs uppercase tracking-wider">Téléphone</h4>
-                <p className="text-xs font-bold text-brand-text">+33 5 56 12 34 56</p>
+                <p className="text-xs font-bold text-brand-text">+33 7 80 97 63 64</p>
                 <p className="text-[10px] text-brand-muted leading-tight">Numéro non surtaxé.</p>
               </div>
             </div>

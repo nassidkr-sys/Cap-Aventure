@@ -182,30 +182,46 @@ export default function VehicleDetailPage({ params }: PageProps) {
       </div>
 
       {/* 2. Airbnb/Yescapa style Photo Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-[400px] rounded-3xl overflow-hidden shadow-sm border border-brand-border">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-3 h-[400px] rounded-3xl overflow-hidden shadow-sm border border-brand-border group">
         {/* Large left photo */}
-        <div className="md:col-span-2 relative h-full bg-brand-hover">
+        <div className="md:col-span-2 relative h-full bg-brand-hover overflow-hidden">
           <img 
             src={vehicle.images[0]} 
             alt={vehicle.name}
-            className="w-full h-full object-cover hover:opacity-95 transition-opacity duration-300"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
           />
         </div>
-        {/* Right stacked photos */}
-        <div className="hidden md:flex flex-col gap-4 h-full">
-          <div className="h-1/2 relative bg-brand-hover">
+        
+        {/* Right side 3-image grid */}
+        <div className="hidden md:grid md:col-span-2 grid-cols-2 grid-rows-2 gap-3 h-full">
+          {/* Top Left */}
+          <div className="relative bg-brand-hover overflow-hidden">
             <img 
               src={vehicle.images[1] || vehicle.images[0]} 
-              alt=""
-              className="w-full h-full object-cover hover:opacity-95 transition-opacity duration-300"
+              alt="Intérieur Salon"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
             />
           </div>
-          <div className="h-1/2 relative bg-brand-hover">
+          {/* Top Right */}
+          <div className="relative bg-brand-hover overflow-hidden">
             <img 
               src={vehicle.images[2] || vehicle.images[0]} 
-              alt=""
-              className="w-full h-full object-cover hover:opacity-95 transition-opacity duration-300"
+              alt="Espace Nuit"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
             />
+          </div>
+          {/* Bottom Left (spans 2 cols to fill) */}
+          <div className="relative bg-brand-hover overflow-hidden col-span-2">
+            <img 
+              src={vehicle.images[3] || vehicle.images[0]} 
+              alt="Espace Cuisine"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
+            />
+            <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-colors cursor-pointer flex items-end justify-end p-4">
+              <span className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-xl text-xs font-bold text-brand-text shadow-sm hover:scale-[1.02] transition-transform">
+                Voir toutes les photos
+              </span>
+            </div>
           </div>
         </div>
       </div>

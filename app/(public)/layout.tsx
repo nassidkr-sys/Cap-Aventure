@@ -86,7 +86,7 @@ export default function PublicLayout({
               className="flex items-center space-x-2 text-xs font-bold text-brand-text/70 hover:text-brand-accent transition-colors duration-200"
             >
               <Phone className="w-4 h-4" />
-              <span>+33 6 12 34 56 78</span>
+              <span>+33 7 80 97 63 64</span>
             </Link>
             <button
               onClick={() => router.push('/admin')}
@@ -125,11 +125,11 @@ export default function PublicLayout({
             </div>
             <div className="pt-4 flex flex-col space-y-3">
               <a
-                href="tel:+33612345678"
+                href="tel:+33780976364"
                 className="flex items-center space-x-2 text-sm font-semibold text-brand-text"
               >
                 <Phone className="w-4 h-4 text-brand-accent" />
-                <span>+33 6 12 34 56 78</span>
+                <span>+33 7 80 97 63 64</span>
               </a>
               <button
                 onClick={() => {
@@ -318,7 +318,7 @@ export default function PublicLayout({
                 <li className="font-medium">14 Av. de la Liberté</li>
                 <li className="font-medium">33000 Bordeaux, France</li>
                 <li><a href="mailto:contact@cap-aventure.fr" className="hover:text-[#C9A035] transition-colors font-medium">contact@cap-aventure.fr</a></li>
-                <li><a href="tel:+33556123456" className="hover:text-[#C9A035] transition-colors font-medium">+33 5 56 12 34 56</a></li>
+                <li><a href="tel:+33780976364" className="hover:text-[#C9A035] transition-colors font-medium">+33 7 80 97 63 64</a></li>
                 <li className="font-medium text-[#94A3B8]">Lun–Sam · 9h00–19h00</li>
               </ul>
             </div>
