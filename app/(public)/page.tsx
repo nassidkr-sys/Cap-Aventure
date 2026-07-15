@@ -103,7 +103,7 @@ export default function HomePage() {
         <div 
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[10000ms] hover:scale-105"
           style={{ 
-            backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=85')` 
+            backgroundImage: `url('https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')` 
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-text/95 via-brand-text/65 to-brand-text/30" />
@@ -116,7 +116,7 @@ export default function HomePage() {
           
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
             Location de vans et <br className="hidden md:inline" />
-            <span className="text-brand-secondary">camping-cars premium</span>
+            <span className="text-brand-accent">camping-cars premium</span>
           </h1>
           
           <p className="text-base md:text-lg text-white/80 max-w-xl mx-auto font-medium">
@@ -201,7 +201,7 @@ export default function HomePage() {
           >
             <div className="relative h-56 overflow-hidden bg-brand-hover">
               <img 
-                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Offres exceptionnelles" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -241,7 +241,7 @@ export default function HomePage() {
           >
             <div className="relative h-56 overflow-hidden bg-brand-hover">
               <img 
-                src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1533827432537-70133748f5c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Avis Cap Aventure" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -293,7 +293,7 @@ export default function HomePage() {
           >
             <div className="relative h-56 overflow-hidden bg-brand-hover">
               <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1513311068348-19c8fbdc0bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Propriétaire Cap Aventure" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -565,7 +565,7 @@ export default function HomePage() {
               className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
             >
               <img 
-                src="https://images.unsplash.com/photo-1473862170180-84427c485ade?auto=format&fit=crop&w=600&q=80" 
+                src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                 alt="Bruges"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -587,7 +587,7 @@ export default function HomePage() {
               className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
             >
               <img 
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" 
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                 alt="Mont Blanc"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -609,7 +609,7 @@ export default function HomePage() {
               className="md:col-span-1 md:row-span-2 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
             >
               <img 
-                src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80" 
+                src="https://images.unsplash.com/photo-1470071131384-001b85755b36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" 
                 alt="Dinant"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -632,7 +632,7 @@ export default function HomePage() {
               className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
             >
               <img 
-                src="https://images.unsplash.com/photo-1549880180-250966e86f68?auto=format&fit=crop&w=600&q=80" 
+                src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                 alt="Loire"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -654,7 +654,7 @@ export default function HomePage() {
               className="md:col-span-2 md:row-span-2 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
             >
               <img 
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" 
+                src="https://images.unsplash.com/photo-1506744626753-edaeb5d8c57a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=80" 
                 alt="Verdon"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -676,7 +676,7 @@ export default function HomePage() {
               className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
             >
               <img 
-                src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80" 
+                src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                 alt="Étretat"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -698,7 +698,7 @@ export default function HomePage() {
               className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
             >
               <img 
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" 
+                src="https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                 alt="Ardennes"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -720,7 +720,7 @@ export default function HomePage() {
               className="md:col-span-1 md:row-span-1 group relative rounded-3xl overflow-hidden border border-brand-border hover-lift shadow-sm cursor-pointer"
             >
               <img 
-                src="https://images.unsplash.com/photo-1563200787-17e923e4299b?auto=format&fit=crop&w=600&q=80" 
+                src="https://images.unsplash.com/photo-1421091255823-f4530d1720d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                 alt="Bruxelles"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />

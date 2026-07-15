@@ -23,6 +23,9 @@ import yescapaData from '@/data/yescapa-vehicles.json';
 
 export async function getVehicles(): Promise<Vehicle[]> {
   try {
+    if (db.app.options.projectId === 'mock-project-id') {
+      return [...MOCK_VEHICLES, ...(yescapaData as Vehicle[])];
+    }
     const q = query(collection(db, 'vehicles'), orderBy('createdAt', 'desc'));
     const querySnapshot = await getDocs(q);
     const list: Vehicle[] = [];
@@ -71,6 +74,10 @@ export async function getVehicles(): Promise<Vehicle[]> {
 
 export async function getVehicleBySlug(slug: string): Promise<Vehicle | null> {
   try {
+    if (db.app.options.projectId === 'mock-project-id') {
+      const allMocks = [...MOCK_VEHICLES, ...(yescapaData as Vehicle[])];
+      return allMocks.find(v => v.slug === slug) || null;
+    }
     const q = query(collection(db, 'vehicles'), where('slug', '==', slug));
     const querySnapshot = await getDocs(q);
     if (!querySnapshot.empty) {
@@ -189,6 +196,7 @@ export async function createReservation(
 
 export async function getReservations(): Promise<Reservation[]> {
   try {
+    if (db.app.options.projectId === 'mock-project-id') return [];
     const q = query(collection(db, 'reservations'), orderBy('createdAt', 'desc'));
     const querySnapshot = await getDocs(q);
     const list: Reservation[] = [];
@@ -222,6 +230,7 @@ export async function updateReservationStatus(id: string, status: ReservationSta
 
 export async function getClients(): Promise<Client[]> {
   try {
+    if (db.app.options.projectId === 'mock-project-id') return [];
     const q = query(collection(db, 'clients'), orderBy('createdAt', 'desc'));
     const querySnapshot = await getDocs(q);
     const list: Client[] = [];
